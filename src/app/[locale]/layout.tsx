@@ -100,7 +100,7 @@ export default async function LocaleLayout({
       className={`${display.variable} ${serif.variable} ${sans.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ivory text-ink">
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale as Locale} messages={messages}>
           <LightboxProvider>
             <SiteHeader transparent />
             <main>{children}</main>
