@@ -1,32 +1,27 @@
+import type { Metadata } from "next";
+import { ImmersiveCta } from "@/components/editorial/ImmersiveCta";
 import { PageHero } from "@/components/editorial/PageHero";
-import { VideoSlot } from "@/components/media/VideoSlot";
-import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/editorial/Reveal";
+import { ImmersiveCarousel } from "@/components/media/ImmersiveCarousel";
+import { MediaFrame } from "@/components/media/MediaFrame";
+import { StayRail } from "@/components/media/StayRail";
 import { Container } from "@/components/ui/Container";
+import { getLodge } from "@/content/catalog";
+import { pageMeta } from "@/lib/page-meta";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
 
-const regions = [
-  {
-    name: "Nungwi & Kendwa",
-    area: "North",
-    text: "Vibrant and festive. Famous for sunsets, clear water, swimming and a wide range of water activities.",
-  },
-  {
-    name: "Paje & Jambiani",
-    area: "South-east",
-    text: "Sporty and bohemian. Long white-sand beaches, fishing villages and a laid-back coast.",
-  },
-  {
-    name: "Matemwe",
-    area: "North-east",
-    text: "Exclusive and peaceful. A quieter escape, with snorkelling near Mnemba Atoll.",
-  },
-  {
-    name: "Stone Town",
-    area: "Historic centre",
-    text: "Winding alleys, carved doors, a UNESCO town of Swahili architecture and living culture.",
-  },
-];
+const regionKeys = ["nungwi", "paje", "matemwe", "stone"] as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMeta(locale, "zanzibarPage");
+}
 
 export default async function Page({
   params,
@@ -35,37 +30,61 @@ export default async function Page({
 }) {
   const { locale } = await params;
   setRequestLocale(asLocale(locale));
+  const t = await getTranslations("zanzibarPage");
+  const ui = await getTranslations("ui");
 
   return (
     <>
       <PageHero
-        image="zanzibar"
-        title="Zanzibar"
-        eyebrow="The jewel of the Indian Ocean"
-        lede="Beaches, culture and unforgettable island days — after the bush, or as a journey of its own."
+        image="zanzibar-beach"
+        images={["zanzibar-beach", "zanzibar-detail", "zanzibar-coast"]}
+        title={t("title")}
+        eyebrow={t("eyebrow")}
+        lede={t("lede")}
       />
-      <Container className="grid gap-12 py-16 md:grid-cols-2 md:py-20">
-        {regions.map((region) => (
-          <article key={region.name}>
-            <p className="eyebrow">{region.area}</p>
-            <h2 className="display mt-3 text-[2.2rem]">{region.name}</h2>
-            <p className="mt-4 text-lg leading-8 text-muted">{region.text}</p>
+      <ImmersiveCarousel
+        ids={["zanzibar", "bagamoyo-boma", "lodge-the-mora", "lodge-the-mora-02", "lodge-the-mora-03"]}
+        caption={t("caption")}
+      />
+      <Container className="grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+        <div className="photo-frame group relative aspect-[4/5]">
+          <MediaFrame id="zanzibar-detail" className="photo-zoom" sizes="(min-width: 768px) 50vw, 100vw" />
+        </div>
+        <div>
+          <p className="eyebrow">{t("light")}</p>
+          <h2 className="display mt-4 text-[2.6rem] md:text-[4rem]">{t("waterTitle")}</h2>
+          <p className="mt-6 text-lg leading-8 text-muted">{t("waterBody")}</p>
+        </div>
+      </Container>
+      <section className="bg-paper">
+        <Container className="py-16 md:py-24">
+          <Reveal className="max-w-xl">
+            <p className="eyebrow">{t("stayEyebrow")}</p>
+            <h2 className="display mt-4 max-w-[14ch] text-[2.4rem] md:text-[3.8rem]">{t("stayTitle")}</h2>
+            <p className="mt-6 max-w-md text-lg leading-8 text-muted">{t("stayBody")}</p>
+          </Reveal>
+          <StayRail
+            lodges={[getLodge("lodge-the-mora")].filter((item): item is NonNullable<typeof item> => Boolean(item))}
+            eyebrow={t("stayCaption")}
+            note={ui("stayNote")}
+          />
+        </Container>
+      </section>
+      <Container className="grid gap-14 py-16 md:grid-cols-2 md:py-20">
+        {regionKeys.map((key) => (
+          <article key={key} className="border-t border-line pt-6">
+            <p className="eyebrow">{t(`${key}Area`)}</p>
+            <h2 className="display mt-3 text-[2.2rem]">{t(`${key}Name`)}</h2>
+            <p className="mt-4 text-lg leading-8 text-muted">{t(`${key}Text`)}</p>
           </article>
         ))}
       </Container>
-      <Container className="pb-10 text-lg leading-8 text-muted">
-        <p>
-          Best time: June to October and January to February are generally the kindest
-          beach months. March to May is usually wetter. Spice tours, Jozani Forest,
-          Mnemba Atoll and Stone Town can be arranged with trusted local partners.
-        </p>
-        <div className="mt-8">
-          <Button href="/plan?destination=zanzibar">Plan Zanzibar</Button>
-        </div>
-      </Container>
-      <Container className="pb-20">
-        <VideoSlot videoId="zanzibar-video" coverId="zanzibar" />
-      </Container>
+      <ImmersiveCta
+        image="zanzibar-coast"
+        title={t("ctaTitle")}
+        href="/plan?destination=zanzibar"
+        label={t("ctaLabel")}
+      />
     </>
   );
 }

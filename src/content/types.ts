@@ -13,6 +13,7 @@ export type MediaAsset = {
   note?: string;
   width?: number;
   height?: number;
+  objectPosition?: string;
 };
 
 export type Place = {
@@ -26,7 +27,17 @@ export type Place = {
   cover: string;
   gallery: string[];
   video?: string;
+  lodges?: string[];
   documented: boolean;
+};
+
+export type Lodge = {
+  slug: string;
+  name: string;
+  area: string;
+  place: "arusha-city" | "tarangire" | "ngorongoro" | "serengeti" | "zanzibar";
+  cover: string;
+  gallery: string[];
 };
 
 export type Destination = {
@@ -93,6 +104,7 @@ export type JournalArticle = {
   category: string;
   excerpt: string;
   cover: string;
+  gallery?: string[];
   body?: string[];
   published: boolean;
 };

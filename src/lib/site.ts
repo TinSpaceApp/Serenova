@@ -21,6 +21,7 @@ export const navItems = [
   { href: "/journeys", key: "journeys" },
   { href: "/journal", key: "journal" },
   { href: "/about", key: "about" },
+  { href: "/why-serenova", key: "why" },
   { href: "/reviews", key: "reviews" },
   { href: "/contact", key: "contact" },
 ] as const;

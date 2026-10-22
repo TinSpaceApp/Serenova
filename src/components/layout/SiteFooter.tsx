@@ -1,41 +1,49 @@
 import { getTranslations } from "next-intl/server";
-import { site } from "@/lib/site";
+import { site, navItems } from "@/lib/site";
+import { LanguageSwitch } from "@/components/layout/LanguageSwitch";
 import { Wordmark } from "@/components/ui/Wordmark";
+import { Link } from "@/i18n/navigation";
 
 export async function SiteFooter() {
   const t = await getTranslations("footer");
-  const year = 2026;
+  const nav = await getTranslations("nav");
 
   return (
-    <footer className="border-t border-line bg-paper">
-      <div className="mx-auto flex max-w-[1180px] flex-col gap-8 px-5 py-10 md:flex-row md:items-end md:justify-between md:px-10 md:py-14">
+    <footer className="border-t border-line bg-forest text-ivory">
+      <div className="mx-auto grid max-w-[1320px] gap-12 px-5 py-16 md:grid-cols-[1.2fr_1fr_1fr] md:px-10 md:py-20">
         <div>
-          <Wordmark />
-          <p className="mt-2 font-sans text-[0.72rem] uppercase tracking-[0.18em] text-muted">
-            {t("tagline")}
-          </p>
+          <Wordmark tone="paper" />
+          <p className="mt-4 max-w-sm text-sm leading-7 text-ivory/65">{t("tagline")}</p>
         </div>
-        <div className="flex flex-col gap-3 font-sans text-sm text-muted md:items-end">
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
-            <a href={site.instagram} className="hover:text-ink">
-              Instagram
-            </a>
-            <a href={site.tiktok} className="hover:text-ink">
-              TikTok
-            </a>
-            <a href={`mailto:${site.email}`} className="hover:text-ink">
-              {site.email}
-            </a>
-            <a href={site.phoneHref} className="hover:text-ink">
-              {site.phoneDisplay}
-            </a>
-          </div>
-          <p>
-            © {year} Serenova. {t("rights")}.
+        <nav className="grid gap-2 font-sans text-sm">
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className="nav-link w-fit text-ivory/75 transition-colors duration-300 hover:text-ivory">
+              {nav(item.key)}
+            </Link>
+          ))}
+        </nav>
+        <div className="grid gap-2 font-sans text-sm text-ivory/75">
+          <a href={`mailto:${site.email}`} className="hover:text-ivory">
+            {site.email}
+          </a>
+          <a href={site.whatsappHref} className="hover:text-ivory">
+            WhatsApp
+          </a>
+          <a href={site.instagram} className="hover:text-ivory">
+            Instagram
+          </a>
+          <p className="mt-4 text-ivory/50">
+            {site.city} · {nav("tanzania")}
           </p>
-          {site.contactsArePlaceholders ? (
-            <p className="text-[0.72rem]">{t("placeholderNote")}</p>
-          ) : null}
+          <div className="mt-5">
+            <LanguageSwitch tone="paper" />
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-[1320px] flex-col gap-3 px-5 py-6 font-sans text-[0.72rem] text-ivory/45 md:flex-row md:justify-between md:px-10">
+          <p>© 2026 Serenova. {t("rights")}.</p>
+          {site.contactsArePlaceholders ? <p>{t("placeholderNote")}</p> : null}
         </div>
       </div>
     </footer>

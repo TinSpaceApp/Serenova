@@ -4,12 +4,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import {
   Cormorant_Garamond,
+  Manrope,
   Mrs_Saint_Delafield,
-  Outfit,
   Source_Serif_4,
 } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { LightboxProvider } from "@/components/media/Lightbox";
 import { routing, type Locale } from "@/i18n/routing";
 import "../globals.css";
 
@@ -27,10 +28,10 @@ const serif = Source_Serif_4({
   display: "swap",
 });
 
-const sans = Outfit({
+const sans = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-outfit",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -54,8 +55,26 @@ export async function generateMetadata({
   const t = await getTranslations({ locale: locale as Locale, namespace: "meta" });
 
   return {
-    title: t("title"),
+    metadataBase: new URL("https://serenova-gilt.vercel.app"),
+    title: {
+      default: t("title"),
+      template: "%s — Serenova",
+    },
     description: t("description"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        fr: "/fr",
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      locale: locale === "fr" ? "fr_FR" : "en_GB",
+      type: "website",
+      siteName: "Serenova",
+    },
   };
 }
 
@@ -81,10 +100,12 @@ export default async function LocaleLayout({
       className={`${display.variable} ${serif.variable} ${sans.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ivory text-ink">
-        <NextIntlClientProvider messages={messages}>
-          <SiteHeader transparent />
-          <main>{children}</main>
-          <SiteFooter />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <LightboxProvider>
+            <SiteHeader transparent />
+            <main>{children}</main>
+            <SiteFooter />
+          </LightboxProvider>
         </NextIntlClientProvider>
       </body>
     </html>

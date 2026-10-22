@@ -1,11 +1,22 @@
+import type { Metadata } from "next";
+import { ImmersiveCta } from "@/components/editorial/ImmersiveCta";
 import { PageHero } from "@/components/editorial/PageHero";
 import { MediaFrame } from "@/components/media/MediaFrame";
-import { VideoSlot } from "@/components/media/VideoSlot";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { getDestination } from "@/content/catalog";
+import { pageMeta } from "@/lib/page-meta";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMeta(locale, "ugandaPage");
+}
 
 export default async function Page({
   params,
@@ -15,28 +26,35 @@ export default async function Page({
   const { locale } = await params;
   setRequestLocale(asLocale(locale));
   const destination = getDestination("uganda")!;
+  const t = await getTranslations("catalog.destinations.uganda");
+  const page = await getTranslations("ugandaPage");
+  const body = t.raw("body") as string[];
 
   return (
     <>
-      <PageHero image="uganda" title="Uganda" eyebrow="Primate country" />
-      <Container className="grid items-center gap-10 py-16 md:grid-cols-2 md:py-20">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.4rem]">
-          <MediaFrame id={destination.cover} />
+      <PageHero
+        image="uganda"
+        images={["uganda", "mahale", "gombe"]}
+        title={t("name")}
+        eyebrow={t("eyebrow")}
+        lede={t("lede")}
+      />
+      <Container className="grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+        <div className="photo-frame group relative aspect-[4/5]">
+          <MediaFrame id={destination.cover} className="photo-zoom" sizes="(min-width: 768px) 50vw, 100vw" />
         </div>
-        <div>
-          <div className="space-y-5 text-lg leading-9 text-muted">
-            {destination.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-          <div className="mt-8">
-            <Button href="/plan?destination=uganda">Contact us about Uganda</Button>
-          </div>
+        <div className="space-y-5 text-lg leading-9 text-muted">
+          {body.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
       </Container>
-      <Container className="pb-20">
-        <VideoSlot videoId="uganda-video" coverId="uganda" />
-      </Container>
+      <ImmersiveCta
+        image="uganda"
+        title={page("ctaTitle")}
+        href="/plan?destination=uganda"
+        label={page("ctaLabel")}
+      />
     </>
   );
 }

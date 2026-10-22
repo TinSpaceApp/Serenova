@@ -7,6 +7,8 @@ type MediaFrameProps = {
   sizes?: string;
   priority?: boolean;
   fill?: boolean;
+  fit?: "cover" | "contain";
+  objectPosition?: string;
 };
 
 export function MediaFrame({
@@ -15,8 +17,11 @@ export function MediaFrame({
   sizes = "100vw",
   priority = false,
   fill = true,
+  fit = "cover",
+  objectPosition,
 }: MediaFrameProps) {
   const asset = getMedia(id);
+  const position = objectPosition ?? asset.objectPosition ?? "center";
 
   if (asset.status === "missing" || asset.status === "placeholder" || !asset.src) {
     return (
@@ -39,7 +44,8 @@ export function MediaFrame({
         alt={asset.alt}
         fill
         priority={priority}
-        className={`object-cover ${className}`}
+        className={`${fit === "contain" ? "object-contain" : "object-cover"} ${className}`}
+        style={{ objectPosition: position }}
         sizes={sizes}
       />
     );
@@ -53,6 +59,7 @@ export function MediaFrame({
       height={asset.height ?? 1000}
       priority={priority}
       className={`h-auto w-full object-cover ${className}`}
+      style={{ objectPosition: position }}
       sizes={sizes}
     />
   );

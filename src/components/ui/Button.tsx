@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-type Variant = "primary" | "light" | "ghost";
+type Variant = "primary" | "light" | "ghost" | "forest";
 
 type ButtonProps = {
   href: string;
@@ -10,12 +10,10 @@ type ButtonProps = {
 };
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-bronze text-white hover:bg-bronze-soft border-transparent",
-  light:
-    "bg-white/95 text-ink hover:bg-white border-white/80 shadow-sm",
-  ghost:
-    "bg-transparent text-ink border-ink/15 hover:border-ink/40",
+  primary: "bg-bronze text-white hover:bg-[#8f5a38] border-transparent",
+  forest: "bg-forest text-ivory hover:bg-[#101910] border-transparent",
+  light: "bg-ivory text-forest hover:bg-white border-ivory/70",
+  ghost: "bg-transparent text-ink border-ink/20 hover:border-ink/50",
 };
 
 export function Button({
@@ -27,7 +25,7 @@ export function Button({
   return (
     <Link
       href={href}
-      className={`inline-flex min-h-11 items-center justify-center rounded-full border px-5 text-[0.8rem] font-medium tracking-[0.04em] transition-colors font-sans ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center rounded-none border px-7 text-[0.76rem] font-medium uppercase tracking-[0.16em] font-sans transition-[background-color,color,border-color,transform,letter-spacing] duration-300 ease-out hover:-translate-y-px hover:tracking-[0.18em] ${variants[variant]} ${className}`}
     >
       {children}
     </Link>

@@ -12,7 +12,7 @@ export function VideoSlot({ videoId, coverId, caption }: VideoSlotProps) {
   const playable = video.kind === "video" && Boolean(video.src);
 
   return (
-    <figure className="overflow-hidden rounded-[1.6rem]">
+    <figure className="overflow-hidden">
       <div className="relative aspect-[4/5] md:aspect-[16/9]">
         {playable ? (
           <video

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Serenova — safaris sur mesure en Afrique de l’Est",
-    "description": "Maison de voyages à Lausanne. Jenny conçoit des safaris personnels en Tanzanie, à Zanzibar et au Kilimandjaro — à votre rythme, jamais en catalogue."
+    "title": "Serenova — voyages privés en Tanzanie et à Zanzibar",
+    "description": "Maison de voyages à Lausanne. Jenny conçoit des safaris sur mesure en Tanzanie, à Zanzibar et au Kilimandjaro — à votre rythme, jamais en catalogue."
   },
   "nav": {
     "menu": "Menu",
@@ -14,51 +14,106 @@
     "styles": "Styles de safari",
     "journeys": "Voyages",
     "about": "À propos",
+    "why": "Pourquoi Serenova",
     "journal": "Journal",
     "contact": "Contact",
     "reviews": "Avis",
     "language": "Langue"
   },
   "home": {
-    "heroLine1": "Des instants plus vastes.",
-    "heroLine2": "Une vie plus lumineuse.",
-    "introEyebrow": "Safaris sur mesure",
-    "introTitle": "Découvrir l’Afrique de l’Est avec Serenova",
-    "introBody": "Des lieux extraordinaires. Des voyages qui ont un sens. Nous concevons des safaris personnels qui vous rapprochent de la nature, d’une faune inoubliable, et de moments qui restent.",
+    "heroEyebrow": "Voyages sur mesure en Tanzanie et à Zanzibar",
+    "heroLine1": "Au-delà de l’ordinaire.",
+    "heroLine2": "Au cœur du sauvage.",
+    "heroLede": "Les lieux extraordinaires méritent une manière plus personnelle de voyager. Découvrez la Tanzanie et Zanzibar à travers des voyages pensés autour de vous.",
+    "heroPrimary": "Composer votre voyage",
+    "heroSecondary": "Explorer les styles de safari",
+    "introEyebrow": "L’art de sentir l’Afrique",
+    "philosophyQuote": "Certains voyages vous mènent quelque part. D’autres restent en vous.",
+    "philosophyCta": "Commencer une conversation",
+    "philosophyNote": "Des voyages privés, écrits autour de vous.",
+    "philosophyCaption": "Safari à pied, Tanzanie",
+    "introTitle": "Votre voyage, uniquement le vôtre",
+    "introBody": "Certains voyageurs rêvent de plaines dorées et d’une faune iconique. D’autres imaginent des matins calmes au bord de l’eau, des rencontres culturelles ou un safari partagé avec ceux qu’ils aiment. Chez Serenova, on écoute d’abord. Avec nos partenaires locaux, nous composons un voyage qui correspond à vos envies, vos dates, votre rythme et votre budget.",
     "momentCaption": "Votre voyage. Votre rythme. Votre Afrique.",
+    "operateEyebrow": "Où nous travaillons",
+    "operateTitle": "La Tanzanie d’abord. Puis l’île.",
+    "operateBody": "Jenny compose depuis Lausanne avec des guides qui connaissent le pays comme une maison. Le Kenya et l’Ouganda se conçoivent sur demande — jamais en catalogue.",
+    "operateTanzania": "Tanzanie — Serengeti, Ngorongoro, Tarangire, Ndutu",
+    "operateZanzibar": "Zanzibar — après le bush, ou un voyage pour elle seule",
+    "operateRequest": "Kenya et Ouganda — sur demande",
+    "operateCaption": "Pays des éléphants, Tarangire",
+    "tanzaniaCaption": "Lumière de rivière, Serengeti",
+    "tanzaniaPlaces": "Serengeti · Ngorongoro · Tarangire · Ndutu",
+    "zanzibarCaption": "La côte claire",
+    "zanzibarNote": "Nungwi, Matemwe, Paje, Stone Town",
+    "wildernessCaption": "Lion, Serengeti",
+    "wildernessDetail": "Plancher du cratère, Ngorongoro",
+    "wildernessAccent": "Hyène tachetée",
+    "founderCaption": "Jenny, fondatrice",
+    "days": "jours",
     "destinationsEyebrow": "Afrique de l’Est",
     "destinationsTitle": "Deux rivages, un même souffle",
     "tanzaniaLabel": "Plaines infinies",
     "tanzaniaTitle": "Tanzanie",
     "tanzaniaBody": "Serengeti, cratère du Ngorongoro, Tarangire, migration. Le cœur du métier Serenova — conçu jour par jour, jamais en stock.",
+    "exploreTanzania": "Découvrir la Tanzanie",
     "zanzibarLabel": "Île et large",
     "zanzibarTitle": "Zanzibar",
     "zanzibarBody": "Sables clairs, eaux turquoise, Stone Town. Souvent la respiration après le safari — parfois le voyage à elle seule.",
+    "exploreZanzibar": "Découvrir Zanzibar",
+    "wildernessEyebrow": "Le sauvage",
+    "wildernessTitle": "Assez près pour entendre la terre",
+    "wildernessBody": "Des safaris à la première lumière, des camps discrets, et la patience d’un guide qui sait quand s’arrêter. La brousse n’est pas un décor. C’est la raison du voyage.",
+    "savannahCaption": "Les plaines",
+    "oceanCaption": "L’océan Indien",
+    "crossingEyebrow": "De la savane à l’océan",
+    "crossingTitle": "Puis l’eau s’ouvre",
     "explore": "Explorer",
-    "stylesEyebrow": "Huit manières de voyager",
-    "stylesTitle": "Le safari n’est pas un format",
-    "stylesBody": "Famille, lune de miel, photo, marche, migration, fly-in, halal, ou simplement la plage. On part de vous, pas d’un catalogue.",
+    "stylesEyebrow": "Votre manière de voyager",
+    "stylesTitle": "À chacun sa façon de vivre l’Afrique",
+    "stylesBody": "Famille, lune de miel, photo, marche, migration, ou la plage après le bush. On part de vous, pas d’un catalogue.",
+    "staysEyebrow": "Où l’on passe la nuit",
+    "staysTitle": "Des camps et des lodges, choisis avec soin",
+    "staysBody": "Une bibliothèque de séjours avec lesquels Jenny travaille vraiment — tentes, lodges au bord du cratère, une maison au bord de l’eau. Rien ici n’est une réservation promise.",
     "journeysEyebrow": "Voyages composés",
-    "journeysTitle": "Des points de départ, jamais des stocks",
-    "journeysBody": "Chaque voyage est relu par Jenny. Les prix affichés sont des indications « à partir de », pour deux voyageurs.",
+    "journeysTitle": "Des voyages d’exception, imaginés pour\u00A0vous",
+    "journeysBody": "Jenny relit chaque demande. Ce sont des idées à partir desquelles composer — les prix affichés sont indicatifs, pour deux voyageurs, à confirmer.",
+    "allJourneys": "Tous les voyages",
     "from": "À partir de",
     "perPerson": "/ personne",
-    "aboutEyebrow": "Lausanne · Tanzanie",
-    "aboutTitle": "Une maison, une personne",
+    "aboutEyebrow": "Jenny · Lausanne",
+    "aboutTitle": "Une passion pour la Tanzanie, un voyage à\u00A0votre\u00A0image",
     "aboutBody": "Serenova est née d’un premier voyage en Tanzanie qui n’a jamais vraiment fini. Jenny conçoit chaque itinéraire à la main, avec des partenaires locaux de confiance, et relit chaque demande elle-même.",
-    "aboutCta": "Rencontre",
-    "ctaTitle": "Racontez le voyage que vous imaginez",
-    "ctaBody": "Quatre questions suffisent. Jenny vous répond en personne — WhatsApp, appel ou e-mail."
+    "aboutCta": "Rencontrer Jenny",
+    "whyCta": "Pourquoi Serenova",
+    "whyEyebrow": "Pourquoi Serenova",
+    "whyTitle": "Une maison, pas un catalogue",
+    "why": {
+      "one": {
+        "title": "Personnel par nature",
+        "body": "Aucun voyageur n’est identique. Votre itinéraire doit refléter ce qui compte pour vous, pas un modèle figé."
+      },
+      "two": {
+        "title": "Une connaissance locale",
+        "body": "Nous travaillons avec des partenaires expérimentés sur place, qui connaissent les lieux, les gens et les réalités concrètes de la Tanzanie."
+      },
+      "three": {
+        "title": "Un accompagnement attentif",
+        "body": "Des premières idées aux détails avant le départ, nous vous aidons à choisir en connaissance de cause et à vous préparer sereinement."
+      }
+    },
+    "ctaTitle": "Partez d’un rêve. Nous aiderons à composer le voyage.",
+    "ctaBody": "Dites-nous quand vous souhaitez partir, qui vous accompagne et ce que vous espérez vivre. Nous explorerons les possibilités avec vous."
   },
   "journeysPreview": {
     "wild": {
       "name": "Wild Essence",
-      "meta": "3 jours · mid-range",
+      "meta": "3 jours · confort",
       "body": "Serengeti et Ngorongoro. Une première rencontre, courte et juste."
     },
     "ndutu": {
       "name": "Ndutu Wilderness",
-      "meta": "8 jours · mid-range",
+      "meta": "8 jours · confort",
       "body": "La saison des naissances, le cratère, puis le Serengeti. Le rythme du devis réel."
     },
     "ocean": {
@@ -68,7 +123,7 @@
     }
   },
   "footer": {
-    "tagline": "Voyages qui comptent",
+    "tagline": "Voyages sur mesure en Tanzanie et à Zanzibar",
     "rights": "Tous droits réservés",
     "placeholderNote": "Coordonnées provisoires — à confirmer avec Jenny."
   },
@@ -110,12 +165,12 @@
       "lede": "Machame, Lemosho, Marangu. Les routes, les jours, et ce qu’il faut vraiment savoir."
     },
     "styles": {
-      "eyebrow": "Typologies",
+      "eyebrow": "Votre manière de voyager",
       "title": "Styles de safari",
-      "lede": "Huit manières d’entrer dans le même pays. On compose ensuite."
+      "lede": "Des voyageurs différents. Le même émerveillement."
     },
     "journeys": {
-      "eyebrow": "Templates",
+      "eyebrow": "Points de départ",
       "title": "Voyages",
       "lede": "Sept départs possibles. Aucun n’est figé. Le prix réel se construit à la main."
     },
@@ -127,7 +182,7 @@
     "journal": {
       "eyebrow": "Guides",
       "title": "Journal",
-      "lede": "Saisons, familles, migration, quoi emporter. Trois textes seed d’abord, pas une usine à SEO."
+      "lede": "Saisons, familles, migration, quoi emporter. Des textes utiles d’abord — pas une usine à référencement."
     },
     "contact": {
       "eyebrow": "Lausanne",
@@ -136,8 +191,109 @@
     },
     "plan": {
       "eyebrow": "Brief personnel",
-      "title": "Composer votre voyage",
-      "lede": "Le planner en quatre étapes arrive à la phase conversion. En attendant, un mot suffit."
+      "title": "Parlez-nous du voyage que vous imaginez",
+      "lede": "Quelques détails nous aideront à comprendre l’expérience que vous avez en tête. Dates souhaitées, nombre de voyageurs, envies et priorités."
+    }
+  },
+  "planner": {
+    "introEyebrow": "Jenny · Lausanne",
+    "introTitle": "Une conversation, pas un catalogue",
+    "introBody": "Quelques détails nous aideront à comprendre l’expérience que vous avez en tête. Dates souhaitées, nombre de voyageurs, envies et priorités à nous confier.",
+    "introCaption": "Jenny, fondatrice",
+    "step1": "Lieu",
+    "step2": "Temps",
+    "step3": "Vous",
+    "step4": "Esprit",
+    "step5": "Nom",
+    "whereTitle": "Qu’est-ce qui vous attire ?",
+    "whereLede": "La Tanzanie est presque toujours le commencement. Le Kenya et l’Ouganda se composent sur demande.",
+    "tanzania": "Tanzanie",
+    "tanzaniaNote": "Le cœur du métier",
+    "zanzibar": "Zanzibar",
+    "zanzibarNote": "Après le bush, ou pour elle seule",
+    "kenya": "Kenya",
+    "kenyaNote": "Sur demande",
+    "uganda": "Ouganda",
+    "ugandaNote": "Sur demande",
+    "startTitle": "Un point de départ, si vous le souhaitez",
+    "tailored": "Écrit seulement pour vous",
+    "tailoredNote": "Aucun itinéraire imprimé",
+    "whenTitle": "Quand, et pour combien de temps ?",
+    "dates": "Dates souhaitées",
+    "dateFrom": "Arrivée",
+    "dateTo": "Départ",
+    "flexible": "Les dates sont flexibles",
+    "nights": "Nombre de nuits",
+    "selected": "Choisi",
+    "nightsHint": "Calculé depuis vos dates. Ajustez si besoin.",
+    "childAgesHint": "Exemple : 6, 9",
+    "budgetHint": "Une fourchette suffit.",
+    "decrease": "Diminuer",
+    "increase": "Augmenter",
+    "whoTitle": "Qui voyage ?",
+    "adults": "Adultes",
+    "children": "Enfants",
+    "childAges": "Âges des enfants",
+    "occasion": "L’occasion",
+    "occFirst": "Un premier safari",
+    "occCouple": "À deux",
+    "occFamily": "En famille",
+    "occFriends": "Entre amis",
+    "occCelebration": "Une célébration",
+    "feelTitle": "Quelle sensation cherchez-vous ?",
+    "styleLegend": "La manière de voyager",
+    "budgetCurrency": "Devise",
+    "budget": "Budget par personne, si vous en avez un",
+    "interests": "Qu’espérez-vous surtout ?",
+    "notes": "Autre chose que Jenny devrait savoir ?",
+    "contactTitle": "Comment Jenny peut-elle vous joindre ?",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "country": "Pays de résidence",
+    "contactPref": "Contact préféré",
+    "whatsapp": "WhatsApp",
+    "emailPref": "E-mail",
+    "phonePref": "Téléphone",
+    "consent": "J’accepte que Jenny utilise ces informations pour préparer une proposition personnelle.",
+    "back": "Retour",
+    "continue": "Continuer",
+    "submit": "Envoyer ma demande",
+    "sending": "Envoi…",
+    "required": "*",
+    "receivedEyebrow": "Reçu",
+    "receivedTitle": "Votre demande a bien été reçue",
+    "receivedBody": "Merci d’avoir écrit à Serenova. Nous relirons vos idées de voyage et vous recontacterons avec les coordonnées indiquées.",
+    "briefTitle": "Votre brief pour l’instant",
+    "briefEmpty": "Choisissez un lieu pour commencer.",
+    "briefPlaces": "Lieux",
+    "briefStart": "Point de départ",
+    "briefWhen": "Quand",
+    "briefWho": "Voyageurs",
+    "briefFeel": "Esprit",
+    "tailoredShort": "Entièrement sur mesure",
+    "discuss": "À préciser",
+    "promise": "Jenny répond en personne.",
+    "adultsShort": "adultes",
+    "childrenShort": "enfants",
+    "faq": {
+      "private": {
+        "q": "Les safaris sont-ils privés ?",
+        "a": "Beaucoup de voyages peuvent se composer avec un véhicule privé ou un hébergement adapté, selon l’itinéraire, les disponibilités et une confirmation."
+      },
+      "combine": {
+        "q": "Puis-je lier safari et Zanzibar ?",
+        "a": "Oui. Beaucoup de voyageurs choisissent un safari sur le continent, puis un séjour à Zanzibar. L’ordre juste dépend des vols, des saisons et de vos envies."
+      },
+      "sightings": {
+        "q": "Une observation précise est-elle garantie ?",
+        "a": "Non. La faune se déplace librement et les rencontres dépendent des conditions naturelles."
+      },
+      "dietary": {
+        "q": "Peut-on tenir compte d’un régime alimentaire ?",
+        "a": "Indiquez vos besoins dès la demande. Nous discuterons des possibilités et confirmerons ce que chaque prestataire peut réellement proposer."
+      }
     }
   }
 }

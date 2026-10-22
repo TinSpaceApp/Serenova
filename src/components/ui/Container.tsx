@@ -10,7 +10,7 @@ export function Container({
   as: Tag = "div",
 }: ContainerProps) {
   return (
-    <Tag className={`mx-auto w-full max-w-[1180px] px-5 md:px-10 ${className}`}>
+    <Tag className={`mx-auto w-full max-w-[1320px] px-5 md:px-10 lg:px-14 ${className}`}>
       {children}
     </Tag>
   );

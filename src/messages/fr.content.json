@@ -1,0 +1,760 @@
+{
+  "ui": {
+    "all": "Tout",
+    "contactUs": "Nous écrire",
+    "viewDestination": "Voir la destination",
+    "readPlace": "Lire le lieu",
+    "startBrief": "Commencer un brief",
+    "fromPrice": "À partir de",
+    "perPerson": "par personne",
+    "indicative": "indicatif",
+    "days": "jours",
+    "region": "Région",
+    "northernTanzania": "Tanzanie du Nord",
+    "widerTanzania": "Plus loin en Tanzanie",
+    "includePlace": "Inclure {name}",
+    "planJourney": "Composer ce voyage",
+    "placePending": "Ce lieu figure sur la carte de Tanzanie. Les notes longues n’ont pas encore été transcrites — nous n’inventons pas une fiche complète.",
+    "articlePending": "Cet article est annoncé. Le texte complet n’a pas encore été fourni, nous ne l’inventons pas.",
+    "readArticle": "Lire l’article",
+    "articleListed": "Annoncé — le texte complet arrive",
+    "styleWayIn": "Une manière d’entrer, pas un produit",
+    "styleFallback": "Jenny s’appuie sur ce style pour choisir les camps, le rythme et le guidage — puis écrit les jours autour de vous.",
+    "planThisStyle": "Composer ce type de voyage",
+    "staysHere": "Où vous pourriez séjourner",
+    "stayNote": "Des adresses de la bibliothèque de lodges de Jenny pour cette région. Disponibilités, catégorie et inclusions se confirment avant toute réservation.",
+    "enlargePhoto": "Voir la photographie",
+    "closePhoto": "Fermer la photographie",
+    "nextPhoto": "Photographie suivante",
+    "prevPhoto": "Photographie précédente",
+    "openPhoto": "Voir la photographie {n}",
+    "provisional": "provisoire",
+    "photoPending": "Photographie à fournir",
+    "filmLabel": "Film de présentation Serenova",
+    "primaryNav": "Navigation principale"
+  },
+  "contactForm": {
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "subject": "Sujet",
+    "message": "Message",
+    "consent": "J’accepte que Jenny utilise ces informations pour répondre à ce message.",
+    "submit": "Envoyer le message",
+    "sending": "Envoi…",
+    "thanks": "Merci. Jenny lira ce message elle-même et vous répondra dès qu’elle le pourra.",
+    "required": "*"
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Écrivez à Jenny à Lausanne. Chaque message est lu en personne.",
+    "title": "Nous écrire",
+    "lede": "Composons votre voyage ensemble.",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "hours": "Horaires",
+    "hoursValue": "Lun–Ven, 9:00–18:00 CET",
+    "basedIn": "Basée à",
+    "basedValue": "Lausanne, Suisse · voyages en Tanzanie et en Afrique de l’Est",
+    "placeholderNote": "Téléphone, WhatsApp et e-mail ci-dessus sont provisoires jusqu’à confirmation par Jenny."
+  },
+  "aboutPage": {
+    "metaTitle": "À propos de Serenova | Safaris personnalisés en Tanzanie",
+    "metaDescription": "Rencontrez Jenny, fondatrice de Serenova, une maison de voyages à Lausanne qui compose des parcours personnalisés en Tanzanie et à Zanzibar avec des partenaires locaux de confiance.",
+    "eyebrow": "Jenny · Lausanne",
+    "title": "À propos de Serenova",
+    "lede": "Une manière plus personnelle de vivre l’Afrique.",
+    "founderEyebrow": "Jenny · fondatrice",
+    "founderTitle": "Des voyages qui comptent",
+    "founderBody1": "J’ai créé Serenova par un amour sincère de la Tanzanie et de Zanzibar, et par la conviction que voyager peut être à la fois mémorable et profond. J’y suis partie pour découvrir une destination, et j’en suis revenue en sachant qu’une part de mon cœur y resterait.",
+    "founderBody2": "Aujourd’hui, j’espère aider d’autres personnes à trouver leur propre lien avec ces lieux extraordinaires.",
+    "signature": "Jenny",
+    "signatureRole": "Fondatrice, Serenova",
+    "storyTitle": "Notre histoire",
+    "storyBody": "Serenova est basée à Lausanne, en Suisse, mais son inspiration est née bien plus au sud, d’un attachement profond à la Tanzanie et à Zanzibar. Ce qui a commencé comme un voyage de découverte est devenu plus durable : le désir de partager ces lieux avec soin et attention. Des savanes immenses et d’une faune remarquable à la chaleur des rencontres et à la beauté de l’océan Indien, ces expériences sont restées longtemps après le retour.",
+    "approachTitle": "Une approche personnelle",
+    "approachBody": "Je crois qu’un beau voyage commence par une conversation. Je veux comprendre vos envies, ce qui vous anime, votre manière de voyager et les détails qui comptent. Premier séjour en Tanzanie ou retour longtemps imaginé, mon but est de composer une expérience considérée et individuelle.",
+    "partnersTitle": "Une expertise locale de confiance",
+    "partnersBody": "Serenova travaille avec des partenaires locaux de confiance à Arusha et à travers la Tanzanie et Zanzibar. Leur connaissance du terrain aide à assembler chaque voyage : safari, guidage, activités choisies et transferts.",
+    "ctaTitle": "Imaginons votre voyage ensemble.",
+    "ctaBody": "Dites-nous quand vous souhaitez partir, qui vous accompagne et ce que vous espérez vivre.",
+    "ctaLabel": "Composer votre voyage"
+  },
+  "reviewsPage": {
+    "metaTitle": "Avis",
+    "metaDescription": "Des expériences réelles seulement. Nous ne publierons pas de noms, notes ou citations inventés.",
+    "title": "Avis",
+    "lede": "Des expériences réelles seulement. Nous ne publierons pas de noms, notes ou citations inventés.",
+    "body1": "Cette page accueillera des avis TripAdvisor, Google ou manuscrits uniquement lorsque Jenny aura fourni les originaux et le droit de les afficher.",
+    "body2": "Des notes telles que « 5/5 sur TripAdvisor » n’apparaîtront ici qu’avec un lien vers le profil public.",
+    "cta": "Écrire à Jenny"
+  },
+  "journalPage": {
+    "metaTitle": "Journal safari Tanzanie | Guides et conseils | Serenova",
+    "metaDescription": "Guides de safari en Tanzanie, saisons, listes de bagage, voyage en famille, essentiels de Zanzibar et une inspiration de voyage responsable.",
+    "eyebrow": "Le journal Serenova",
+    "title": "Des guides pour des voyages extraordinaires",
+    "lede": "Des conseils concrets, une inspiration attentive et des repères utiles pour préparer la Tanzanie et Zanzibar. Paysages, faune, saisons et détails du quotidien qui rendent un voyage plus juste.",
+    "all": "Tous",
+    "related": "À lire aussi",
+    "lastReviewed": "Dernière revue",
+    "officialSources": "Sources officielles",
+    "continueReading": "Continuer",
+    "readArticle": "Lire l’article",
+    "contents": "Dans cet article",
+    "seasons": "Les saisons"
+  },
+  "destinationsPage": {
+    "metaTitle": "Destinations",
+    "metaDescription": "Tanzanie, Zanzibar, Kenya et Ouganda — composés autour de votre voyage, jamais en stock.",
+    "eyebrow": "Afrique de l’Est",
+    "title": "Des lieux extraordinaires",
+    "lede": "Des plaines mythiques aux îles plus lentes. On commence presque toujours par la Tanzanie."
+  },
+  "stylesPage": {
+    "metaTitle": "Styles de safari en Tanzanie | Safaris personnalisés | Serenova",
+    "metaDescription": "Explorer des styles de safari personnalisés en Tanzanie : photo animalière, Grande Migration, familles, lunes de miel et escapades à Zanzibar.",
+    "eyebrow": "Votre manière de voyager",
+    "title": "Styles de safari",
+    "lede": "Des voyageurs différents. Le même émerveillement.",
+    "intro": "Chaque voyageur est unique, et chaque voyage Serenova aussi. Que vous souhaitiez ralentir, photographier la faune, célébrer un moment ou explorer en famille, découvrez les expériences qui peuvent façonner votre temps en Tanzanie."
+  },
+  "journeysPage": {
+    "metaTitle": "Voyages",
+    "metaDescription": "Des safaris sur mesure en Tanzanie, imaginés autour de vous. Chaque prix est indicatif et à confirmer.",
+    "eyebrow": "Voyages composés",
+    "title": "Des voyages d’exception, imaginés pour\u00A0vous",
+    "lede": "Sept voyages possibles. Aucun n’est figé. Le prix réel se construit à la main.",
+    "different": "Vous cherchez autre chose ?"
+  },
+  "tanzaniaPage": {
+    "metaTitle": "Tanzanie",
+    "metaDescription": "Serengeti, Ngorongoro, Tarangire et le sud plus calme — un voyage en Tanzanie écrit autour de vous.",
+    "eyebrow": "Le cœur du métier",
+    "title": "Tanzanie",
+    "lede": "Des parcs mythiques au pays plus calme plus au sud — un voyage écrit autour de votre histoire.",
+    "caption": "Tanzanie",
+    "northern": "Le circuit du Nord",
+    "northernPlaces": "Lieux du Nord",
+    "wider": "Plus loin en Tanzanie",
+    "plan": "Composer votre voyage en Tanzanie",
+    "staysEyebrow": "Où vous pourriez séjourner",
+    "staysTitle": "Une bibliothèque de lodges du Nord",
+    "staysBody": "Chaque photographie vient du dossier lodges de Jenny. Disponibilités, catégorie et inclusions se confirment avant toute réservation.",
+    "ctaTitle": "Commencer par la Tanzanie",
+    "ctaLabel": "Composer votre voyage"
+  },
+  "kenyaPage": {
+    "metaTitle": "Kenya",
+    "metaDescription": "Le Kenya sur demande — Masai Mara et au-delà, composé avec Jenny, pas vendu en catalogue.",
+    "ctaTitle": "Écrire à Jenny pour le Kenya",
+    "ctaLabel": "Commencer un brief"
+  },
+  "ugandaPage": {
+    "metaTitle": "Ouganda",
+    "metaDescription": "L’Ouganda sur demande — forêts, gorilles et lacs. Une conversation avec Jenny, pas une grille de départ.",
+    "ctaTitle": "Écrire à Jenny pour l’Ouganda",
+    "ctaLabel": "Commencer un brief"
+  },
+  "zanzibarPage": {
+    "metaTitle": "Zanzibar",
+    "metaDescription": "Nungwi, Matemwe, Paje et Stone Town — le souffle après le safari, ou un voyage à elle seule.",
+    "eyebrow": "Le joyau de l’océan Indien",
+    "title": "Zanzibar",
+    "lede": "Plages, culture et jours d’île inoubliables — après le bush, ou comme voyage à elle seule.",
+    "caption": "Les îles",
+    "light": "Lumière d’île",
+    "waterTitle": "Puis l’eau s’ouvre",
+    "waterBody": "Meilleure période : juin à octobre et janvier–février sont en général les mois les plus doux. Mars à mai est souvent plus humide. Visites des épices, forêt de Jozani, atoll de Mnemba et Stone Town se composent avec des partenaires locaux de confiance.",
+    "stayEyebrow": "Après le bush",
+    "stayTitle": "Un lodge au bord de l’eau",
+    "stayBody": "The Mora est une adresse de Zanzibar dans la bibliothèque de Jenny — choisie lorsque la côte, le rythme et les chambres conviennent. D’autres plages et maisons se composent autour de vous.",
+    "stayCaption": "The Mora Zanzibar — séjour illustratif",
+    "ctaTitle": "Composer Zanzibar",
+    "ctaLabel": "Composer votre voyage",
+    "nungwiArea": "Nord",
+    "nungwiName": "Nungwi et Kendwa",
+    "nungwiText": "Vivant et festif. Célèbre pour les couchers de soleil, l’eau claire, la baignade et les activités nautiques.",
+    "pajeArea": "Sud-est",
+    "pajeName": "Paje et Jambiani",
+    "pajeText": "Sportif et bohème. Longues plages de sable blanc, villages de pêcheurs et une côte plus lente.",
+    "matemweArea": "Nord-est",
+    "matemweName": "Matemwe",
+    "matemweText": "Exclusif et calme. Une échappée plus discrète, avec le snorkeling près de l’atoll de Mnemba.",
+    "stoneArea": "Centre historique",
+    "stoneName": "Stone Town",
+    "stoneText": "Ruelle, portes sculptées, une ville UNESCO d’architecture swahilie et de culture vivante."
+  },
+  "kilimanjaroPage": {
+    "metaTitle": "Kilimandjaro",
+    "metaDescription": "Des voies du Kilimandjaro composées autour de votre forme, de votre temps et de votre rythme.",
+    "eyebrow": "Gravir le plus haut sommet d’Afrique",
+    "title": "Kilimandjaro",
+    "lede": "Plus qu’une montagne — un voyage qui reste.",
+    "higher": "Un autre point de vue",
+    "mountainTitle": "Plus qu’une montagne",
+    "mountainBody": "À 5 895 mètres, le Kilimandjaro est une marche profonde : forêt tropicale, désert alpin, puis un sommet qui vous rend la lumière et le silence. Serenova compose la voie autour de votre forme, de votre temps et de votre rythme.",
+    "routesEyebrow": "Nos voies",
+    "routesTitle": "Sept chemins vers le sommet",
+    "stat1": "5 895 m · plus haut sommet d’Afrique",
+    "stat2": "En général 7 à 9 jours sur la montagne",
+    "stat3": "Meilleurs mois : janvier–mars et juin–octobre",
+    "stat4": "Guidage, porteurs, permis et repas inclus dans une ascension Serenova",
+    "plan": "Composer votre Kilimandjaro"
+  },
+  "journeyPage": {
+    "overview": "Vue d’ensemble",
+    "itinerary": "Itinéraire",
+    "highlights": "Points forts",
+    "price": "Prix indicatif par personne",
+    "travellers": "Voyageurs",
+    "fromUsd": "À partir de USD",
+    "priceNote": "Les prix varient selon la saison, le camp et les disponibilités. Ils ne constituent pas une confirmation.",
+    "includes": "Inclus",
+    "excludes": "Non inclus",
+    "stays": "Hébergements",
+    "staysNote": "Photographies de la bibliothèque de lodges de Jenny. Le camp définitif de votre itinéraire se confirme avant réservation — jamais à partir d’une image.",
+    "route": "Parcours",
+    "ctaTitle": "Dites à Jenny l’esprit de ce voyage",
+    "ctaLabel": "Composer ce voyage"
+  },
+  "planPage": {
+    "metaTitle": "Composer votre voyage",
+    "metaDescription": "Parlez-nous du voyage que vous imaginez en Tanzanie et à Zanzibar. Un brief personnel : dates, voyageurs et expériences qui comptent."
+  },
+  "whyPage": {
+    "metaTitle": "Pourquoi voyager avec Serenova | Safaris sur mesure en Tanzanie",
+    "metaDescription": "L’approche personnelle de Serenova : partenaires locaux choisis, itinéraires sur mesure et un accompagnement attentif.",
+    "eyebrow": "Notre philosophie",
+    "title": "Pourquoi voyager avec Serenova ?",
+    "lede": "Plus qu’un safari. Un voyage façonné par la passion, la confiance et une attention personnelle.",
+    "introCaption": "Safari à pied, Tanzanie",
+    "intro": "Chez Serenova, voyager, c’est plus qu’atteindre une destination. C’est découvrir des lieux extraordinaires d’une manière naturelle, personnelle et juste. Notre rôle : écouter, conseiller et relier les détails, pour que vous puissiez aimer le voyage lui-même.",
+    "passion": {
+      "title": "Passion et expérience personnelle",
+      "body": "Serenova est née d’un attachement sincère à la Tanzanie et à Zanzibar. Ce lien façonne notre manière d’être : chaleureuse, engagée, attentive à ce qui rend chaque voyage significatif."
+    },
+    "partners": {
+      "title": "Des partenaires locaux de confiance",
+      "body": "Nous travaillons avec des partenaires choisis à Arusha et au-delà, notamment des professionnels du safari et des prestataires de services. Leur regard local compte dans une composition attentive."
+    },
+    "guides": {
+      "title": "Des guides locaux expérimentés",
+      "body": "Un guide change profondément un safari. La connaissance du lieu, la lecture du comportement animal et un guidage respectueux transforment une observation en une compréhension plus juste."
+    },
+    "tailored": {
+      "title": "Des voyages sur mesure",
+      "body": "Votre route peut refléter ce qui vous intéresse : safaris classiques, paysages et photo, rythme familial, hébergement plus intime, rencontres culturelles ou une extension à Zanzibar."
+    },
+    "nature": {
+      "title": "Le respect de la nature et de la faune",
+      "body": "La faune a besoin d’espace. Nous privilégions des rencontres responsables et encourageons à suivre les règles des parcs, à respecter les communautés et à limiter l’impact évitable."
+    },
+    "more": {
+      "title": "Plus qu’un safari",
+      "body": "Un voyage peut lier Tanzanie continentale et Zanzibar, avec du temps pour les plages, la culture, les déplacements pittoresques et d’autres visages de la région."
+    },
+    "guidance": {
+      "title": "Un accompagnement, étape après étape",
+      "body": "Des premières questions aux préparatifs avant le départ, nous voulons rendre le processus clair et personnel. Nous expliquons les choix, parlons des détails concrets et vous aidons à vous préparer."
+    },
+    "memory": {
+      "title": "Des expériences dont on se souvient",
+      "body": "Aucun voyage n’a besoin de promettre l’impossible. La joie tient à des détails bien pensés, à des paysages remarquables et à des instants qui vous appartiennent."
+    },
+    "closeEyebrow": "Serenova",
+    "closeTitle": "Votre voyage nous est personnel",
+    "closeBody": "Nous écoutons d’abord, puis composons avec des partenaires locaux de confiance — pour que les jours reflètent ce qui compte pour vous.",
+    "ctaTitle": "Partez d’un rêve.",
+    "ctaBody": "Dites-nous quand vous souhaitez partir, qui vous accompagne et ce que vous espérez vivre."
+  },
+  "catalog": {
+    "terms": {
+      "includes": [
+        "Transport privé",
+        "Tous les hébergements de l’itinéraire",
+        "Frais de parc",
+        "Taxes / TVA",
+        "Repas selon le programme"
+      ],
+      "excludes": [
+        "Vols internationaux",
+        "Nuits supplémentaires avant ou après le safari",
+        "Pourboires",
+        "Effets personnels, assurance et visas"
+      ],
+      "tipsSuggested": "Pourboires (environ 15 USD par personne et par jour)",
+      "zanzibarActivities": "Activités à Zanzibar si elles sont ajoutées"
+    },
+    "tier": {
+      "Mid-range": "Confort",
+      "Luxury": "Luxe",
+      "Semi-luxury": "Semi-luxe"
+    },
+    "destinations": {
+      "tanzania": {
+        "name": "Tanzanie",
+        "eyebrow": "Faune iconique",
+        "lede": "Faune iconique, paysages ouverts et journées de safari inoubliables.",
+        "body": [
+          "Du circuit du Nord aux parcs plus calmes du Sud, la Tanzanie est le cœur du métier Serenova. Chaque voyage s’écrit autour de vous — jamais en stock."
+        ]
+      },
+      "zanzibar": {
+        "name": "Zanzibar",
+        "eyebrow": "Lumière d’île",
+        "lede": "Eau turquoise, sables clairs et un profond héritage swahili.",
+        "body": [
+          "Souvent le souffle après le safari — parfois le voyage lui-même. Nungwi, Kendwa, Paje, Matemwe et Stone Town, composés avec des partenaires locaux de confiance."
+        ]
+      },
+      "kenya": {
+        "name": "Kenya",
+        "eyebrow": "Sur demande",
+        "lede": "Savanes immenses et faune iconique, du Masai Mara au Nord plus calme.",
+        "body": [
+          "Le Kenya est un pays de contrastes extraordinaires. Serenova y compose des safaris sur mesure avec des contacts locaux de confiance.",
+          "Pour un voyage au Kenya, écrivez directement à Jenny. Ce n’est pas un catalogue."
+        ]
+      },
+      "uganda": {
+        "name": "Ouganda",
+        "eyebrow": "Sur demande",
+        "lede": "Forêts, gorilles des hauts plateaux et lacs — une page d’intention, pas une grille de départ.",
+        "body": [
+          "L’Ouganda, c’est la forêt dense, les hauts plateaux et de rares rencontres avec les primates, de Bwindi au parc national Queen Elizabeth et aux chutes Murchison.",
+          "Pour un voyage en Ouganda, contactez Jenny directement."
+        ]
+      }
+    },
+    "styles": {
+      "halal-friendly": {
+        "name": "Safari halal",
+        "summary": "Voyager en respectant votre foi et vos priorités. Nous pouvons parler à l’avance des repas, de la prière, de l’intimité et d’un rythme confortable. Les arrangements précis dépendent de la route et de l’hébergement, et se confirment avant toute réservation.",
+        "chapter": "Voyager l’esprit libre",
+        "note": "Rien n’est présumé. Les arrangements essentiels se confirment auprès de chaque prestataire avant la réservation."
+      },
+      "fly-in": {
+        "name": "Safari en avion",
+        "summary": "Voir davantage de la Tanzanie en limitant les longs transferts routiers. Lorsque les routes et les horaires le permettent, des vols intérieurs relient des zones de safari plus reculées.",
+        "chapter": "Moins de route, plus de sauvage",
+        "note": "Un voyage en avion offre un équilibre entre aventure, confort et temps dans la nature — selon les liaisons disponibles."
+      },
+      "walking": {
+        "name": "Safari à pied",
+        "summary": "Découvrir la brousse autrement. Accompagné de guides locaux qualifiés, dans des zones autorisées, un safari à pied révèle traces, oiseaux, plantes et détails souvent invisibles depuis un véhicule.",
+        "chapter": "Au rythme de la terre",
+        "note": "Itinéraires, âges et disponibilités dépendent des règles du parc et des conditions de sécurité."
+      },
+      "photography": {
+        "name": "Safari photo",
+        "summary": "Pour les photographes, le rythme change tout. Un safari plus lent laisse le temps de travailler la lumière, la position et le comportement animal, plutôt que de passer d’une observation à l’autre.",
+        "chapter": "Le temps, la lumière, l’accès",
+        "note": "Des débutants curieux aux photographes confirmés, l’itinéraire peut refléter vos objectifs. Véhicules ou guides spécialisés selon disponibilités."
+      },
+      "honeymoon": {
+        "name": "Safari de noces",
+        "summary": "Ouvrir un nouveau chapitre dans de grands paysages, avec des instants à partager. Safaris sans hâte, lodges accueillants, couchers de soleil, et peut-être quelques jours de repos au bord de l’océan Indien.",
+        "chapter": "Deux personnes, un très grand paysage",
+        "note": "Votre lune de miel se compose autour de ce qui vous ressemble : aventure, repos, intimité et rythme."
+      },
+      "family": {
+        "name": "Safari en famille",
+        "summary": "Faire découvrir le monde naturel aux plus jeunes. Un safari familial peut lier rencontres animalières, trajets plus courts, séjours confortables, repos et activités adaptées à chaque âge.",
+        "chapter": "Une brousse qui accueille encore les enfants",
+        "note": "Nous vous aidons à regarder les détails pratiques avant de choisir la route. Règles enfants et limites d’activités se confirment avec chaque prestataire."
+      },
+      "beach-zanzibar": {
+        "name": "Plage et Zanzibar",
+        "summary": "De l’héritage de Stone Town au littoral remarquable de l’île, Zanzibar ouvre une autre dimension. Eau tiède, saveurs locales, découvertes côtières et le temps de ralentir.",
+        "chapter": "Après le bush, l’eau",
+        "note": "Les conditions de plage varient selon la côte et la saison. La bonne rive dépend de la manière dont vous aimez passer vos jours."
+      },
+      "great-migration": {
+        "name": "Safari de la Grande Migration",
+        "summary": "Suivre l’un des grands mouvements de faune au monde. À travers l’écosystème du Serengeti, les troupeaux répondent à la pluie et à la recherche de pâturages.",
+        "chapter": "L’un des grands mouvements de la nature",
+        "note": "Nous composons autour des tendances saisonnières, en sachant que les déplacements et les traversées de rivière ne peuvent jamais être garantis."
+      }
+    },
+    "places": {
+      "serengeti": {
+        "name": "Parc national du Serengeti",
+        "summary": "Plaines UNESCO, la migration, et l’un des grands théâtres de faune d’Afrique."
+      },
+      "ngorongoro": {
+        "name": "Cratère du Ngorongoro",
+        "summary": "La plus grande caldeira volcanique intacte du monde, dense en faune."
+      },
+      "tarangire": {
+        "name": "Parc national de Tarangire",
+        "summary": "Troupeaux d’éléphants, baobabs anciens et un parc du Nord plus intime."
+      },
+      "lake-manyara": {
+        "name": "Parc national du lac Manyara",
+        "summary": "Un parc compact de la vallée du Rift : forêt, lac et célèbres lions grimpeurs."
+      },
+      "arusha-city": {
+        "name": "Arusha",
+        "summary": "La porte du circuit du Nord : arrivées, briefings et première nuit."
+      },
+      "arusha-national-park": {
+        "name": "Parc national d’Arusha",
+        "summary": "Un parc vert de lacs, colobes et vues sur le mont Meru."
+      },
+      "mount-kilimanjaro": {
+        "name": "Mont Kilimandjaro",
+        "summary": "Le plus haut sommet d’Afrique — traité en entier sur sa propre page."
+      },
+      "lake-natron": {
+        "name": "Lac Natron",
+        "summary": "Un lac alcalin reculé, lieu de nidification des flamants, au pied de l’Ol Doinyo Lengai."
+      },
+      "saadani": {
+        "name": "Parc national de Saadani",
+        "summary": "Là où le bush rejoint l’océan Indien."
+      },
+      "kitulo": {
+        "name": "Parc national de Kitulo",
+        "summary": "Un parc d’altitude aux fleurs sauvages, souvent appelé le Serengeti des fleurs."
+      },
+      "nyerere": {
+        "name": "Parc national Nyerere",
+        "summary": "L’un des plus grands parcs d’Afrique : rivière, safari en bateau et sud sauvage."
+      },
+      "ruaha": {
+        "name": "Parc national de Ruaha",
+        "summary": "Un vaste parc du Sud, moins visité : baobabs, lions et la Great Ruaha River."
+      },
+      "mikumi": {
+        "name": "Parc national de Mikumi",
+        "summary": "Un parc du Sud plus accessible, sur la route vers Nyerere et la côte."
+      },
+      "udzungwa": {
+        "name": "Parc national des monts Udzungwa",
+        "summary": "Forêt de l’arc oriental, primates endémiques et marches vers les chutes."
+      },
+      "katavi": {
+        "name": "Parc national de Katavi",
+        "summary": "L’un des parcs les plus sauvages et les moins visités de Tanzanie."
+      },
+      "mahale": {
+        "name": "Parc national des monts Mahale",
+        "summary": "Le lac Tanganyika et des chimpanzés habitués, sur des pentes forestières."
+      },
+      "gombe": {
+        "name": "Parc national de Gombe Stream",
+        "summary": "La forêt de Jane Goodall au bord du lac — un tracking intime des chimpanzés."
+      },
+      "bagamoyo": {
+        "name": "Bagamoyo",
+        "summary": "Une ville côtière historique de pierre, de boutres et de mémoire swahilie."
+      }
+    },
+    "stayRoles": {
+      "Karatu / Tarangire": "Karatu / Tarangire",
+      "Tarangire alternative": "Alternative Tarangire",
+      "Karatu alternative": "Alternative Karatu",
+      "Serengeti (or similar)": "Serengeti (ou similaire)",
+      "Serengeti alternative": "Alternative Serengeti",
+      "Night 1": "Nuit 1",
+      "Tarangire": "Tarangire",
+      "Ngorongoro": "Ngorongoro",
+      "Northern Serengeti": "Serengeti du Nord",
+      "Arusha": "Arusha",
+      "Ndutu (or similar)": "Ndutu (ou similaire)",
+      "Central Serengeti": "Serengeti central",
+      "Illustrative luxury stay": "Adresse luxe, à titre d’illustration",
+      "Illustrative photography stay": "Adresse photo, à titre d’illustration",
+      "Illustrative bush stay": "Adresse brousse, à titre d’illustration",
+      "Illustrative ocean stay": "Adresse océan, à titre d’illustration"
+    },
+    "packages": {
+      "crater-baobab": {
+        "name": "Échappée Cratère & Baobab",
+        "subtitle": "2 jours · Tarangire et Ngorongoro",
+        "audience": "Couples, amis et courtes échappées",
+        "overview": "Deux hauts lieux du circuit du Nord en deux jours : les éléphants et baobabs de Tarangire, puis le cratère du Ngorongoro. Un safari court, dense en faune.",
+        "itinerary": [
+          {
+            "title": "Jour 1 — Parc national de Tarangire",
+            "text": "Safari parmi les éléphants, les baobabs et une faune mixte. Nuit au Farm of Dreams Lodge ou similaire."
+          },
+          {
+            "title": "Jour 2 — Cratère du Ngorongoro – Arusha",
+            "text": "Descente dans le cratère pour une journée de safari, puis retour à Arusha en fin d’après-midi."
+          }
+        ],
+        "highlights": [
+          "Safaris à Tarangire et dans le cratère du Ngorongoro",
+          "Troupeaux d’éléphants et baobabs",
+          "Possibilité de voir lion, buffle, zèbre et gnou",
+          "Véhicule privé et guide professionnel"
+        ],
+        "includes": [
+          "Transport privé",
+          "Tous les hébergements de l’itinéraire",
+          "Frais de parc",
+          "Taxes / TVA",
+          "Repas selon le programme"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Nuits supplémentaires avant ou après le safari",
+          "Pourboires",
+          "Effets personnels, assurance et visas",
+          "Pourboires (environ 15 USD par personne et par jour)"
+        ]
+      },
+      "wild-essence": {
+        "name": "Essence sauvage",
+        "subtitle": "3 jours · Serengeti et Ngorongoro",
+        "audience": "Couples, familles et amis",
+        "overview": "Les plaines infinies du Serengeti et la merveille du cratère du Ngorongoro en trois jours — deux paysages iconiques de Tanzanie.",
+        "itinerary": [
+          {
+            "title": "Jour 1 — Arusha au Serengeti",
+            "text": "Route d’Arusha vers le Serengeti. Safari l’après-midi. Nuit au Serengeti Serena Lodge ou similaire."
+          },
+          {
+            "title": "Jour 2 — Journée entière au Serengeti",
+            "text": "Safaris du matin et de l’après-midi. Nuit au Serengeti."
+          },
+          {
+            "title": "Jour 3 — Serengeti, Ngorongoro – Arusha",
+            "text": "Safari du matin, puis le cratère du Ngorongoro et retour à Arusha en fin d’après-midi."
+          }
+        ],
+        "highlights": [
+          "Safaris au Serengeti et dans le cratère du Ngorongoro",
+          "Possibilité de voir les Big Five",
+          "Guides professionnels et expérimentés",
+          "Souple pour couples, familles ou petits groupes"
+        ],
+        "includes": [
+          "Véhicule safari 4x4 privé",
+          "Guide anglophone",
+          "Hébergement selon l’itinéraire",
+          "Repas (pension complète)",
+          "Frais de parc et de conservation",
+          "Transferts aéroport / Arusha"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Assurance voyage",
+          "Visas",
+          "Boissons sauf mention contraire",
+          "Pourboires"
+        ]
+      },
+      "great-migration": {
+        "name": "Voyage Grande Migration",
+        "subtitle": "6 jours · safari en Tanzanie",
+        "audience": "Couples, familles et amis",
+        "overview": "Six jours autour de la Grande Migration : Tarangire, Ngorongoro et Serengeti du Nord, avec départ et retour à Arusha.",
+        "itinerary": [
+          { "title": "Jour 1 — Arusha", "text": "Arrivée et installation. Nuit à Under the Shade Arusha ou similaire." },
+          { "title": "Jour 2 — Parc national de Tarangire", "text": "Pays des éléphants et des baobabs. Nuit au Farm of Dreams ou similaire." },
+          { "title": "Jour 3 — Cratère du Ngorongoro", "text": "Une journée entière dans le cratère. Nuit au Serenity Camp ou similaire." },
+          { "title": "Jour 4 — Serengeti du Nord", "text": "Vers la migration. Nuit au Moyo Camp North ou similaire." },
+          { "title": "Jour 5 — Serengeti du Nord", "text": "Une journée avec les troupeaux, selon la saison." },
+          { "title": "Jour 6 — Retour", "text": "Dernier safari, puis route vers Arusha." }
+        ],
+        "highlights": [
+          "La Grande Migration au Serengeti du Nord, en saison",
+          "Le cratère du Ngorongoro",
+          "Safaris à Tarangire et au Serengeti",
+          "Camps semi-luxe"
+        ],
+        "includes": [
+          "Transport privé",
+          "Tous les hébergements de l’itinéraire",
+          "Frais de parc",
+          "Taxes / TVA",
+          "Repas selon le programme"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Nuits supplémentaires avant ou après le safari",
+          "Pourboires",
+          "Effets personnels, assurance et visas",
+          "Activités à Zanzibar si elles sont ajoutées"
+        ]
+      },
+      "ndutu-wilderness": {
+        "name": "Wilderness de Ndutu",
+        "subtitle": "8 jours · safari en Tanzanie",
+        "audience": "Couples, familles et amis",
+        "overview": "Huit jours confort à travers le Ngorongoro, les naissances de Ndutu et le Serengeti central — le rythme d’un vrai safari composé, d’Arusha à Arusha.",
+        "itinerary": [
+          { "title": "Jour 1 — Arusha", "text": "Arrivée et transfert au lodge. Nuit au Tulia Boutique & Spa ou similaire." },
+          { "title": "Jour 2 — Ngorongoro vers Ndutu", "text": "Du rebord du cratère vers Ndutu. Nuit au Ndutu Camp Migration ou similaire." },
+          { "title": "Jour 3 — Ndutu", "text": "Journée entière à Ndutu, en saison avec les naissances." },
+          { "title": "Jour 4 — Ndutu", "text": "Une seconde journée à Ndutu pour la lumière, les félins et les déplacements." },
+          { "title": "Jour 5 — Serengeti central", "text": "Route vers le Serengeti central. Nuit au Tukaone Serengeti ou similaire." },
+          { "title": "Jour 6 — Serengeti central", "text": "Journée entière de safaris." },
+          { "title": "Jour 7 — Retour par le Ngorongoro", "text": "Route vers Arusha. Nuit au Tulia ou similaire." },
+          { "title": "Jour 8 — Aéroport du Kilimandjaro", "text": "Transfert de départ." }
+        ],
+        "highlights": [
+          "Le cratère du Ngorongoro",
+          "Ndutu et la Grande Migration, en saison",
+          "Safaris au Serengeti central",
+          "Camps et lodges confort"
+        ],
+        "includes": [
+          "Transport privé",
+          "Tous les hébergements de l’itinéraire",
+          "Frais de parc",
+          "Taxes / TVA",
+          "Repas selon le programme"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Nuits supplémentaires avant ou après le safari",
+          "Pourboires",
+          "Effets personnels, assurance et visas"
+        ]
+      },
+      "northern-migration": {
+        "name": "Passage de la migration du Nord",
+        "subtitle": "8 jours · luxe",
+        "audience": "Couples et petits groupes",
+        "overview": "Huit jours de luxe sur la migration du Nord, pour ceux qui veulent moins de véhicules et plus d’espace.",
+        "itinerary": [
+          {
+            "title": "Jours 1–8",
+            "text": "Circuit luxe du Nord tel qu’imprimé sur la maquette p.31 — le détail jour par jour reste à confirmer avec Jenny avant publication."
+          }
+        ],
+        "highlights": [
+          "Serengeti du Nord en saison de migration",
+          "Camps de luxe",
+          "Guidage privé"
+        ],
+        "includes": [
+          "Transport privé",
+          "Tous les hébergements de l’itinéraire",
+          "Frais de parc",
+          "Taxes / TVA",
+          "Repas selon le programme"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Nuits supplémentaires avant ou après le safari",
+          "Pourboires",
+          "Effets personnels, assurance et visas"
+        ]
+      },
+      "through-the-lens": {
+        "name": "À travers l’objectif",
+        "subtitle": "10 jours · photographie",
+        "audience": "Photographes",
+        "overview": "Dix jours pensés pour la lumière, le temps et l’accès.",
+        "itinerary": [
+          {
+            "title": "Jours 1–10",
+            "text": "Circuit du Nord pensé pour la photographie, tel qu’imprimé sur la maquette p.32 — itinéraire complet à confirmer."
+          }
+        ],
+        "highlights": [
+          "Du temps pour photographier",
+          "Parcs iconiques du Nord",
+          "Safaris guidés"
+        ],
+        "includes": [
+          "Transport privé",
+          "Tous les hébergements de l’itinéraire",
+          "Frais de parc",
+          "Taxes / TVA",
+          "Repas selon le programme"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Nuits supplémentaires avant ou après le safari",
+          "Pourboires",
+          "Effets personnels, assurance et visas"
+        ]
+      },
+      "bush-ocean": {
+        "name": "Échappée Brousse & Océan",
+        "subtitle": "10 jours · luxe · safari et Zanzibar",
+        "audience": "Couples et lunes de miel",
+        "overview": "Le safari, puis Zanzibar. La terre, puis le large.",
+        "itinerary": [
+          { "title": "Jours de brousse", "text": "Safari du circuit du Nord, tel qu’imprimé." },
+          { "title": "Jours d’océan", "text": "Le temps de plage à Zanzibar, après la brousse." }
+        ],
+        "highlights": [
+          "Safari de luxe",
+          "Zanzibar après la brousse",
+          "Un seul voyage, composé"
+        ],
+        "includes": [
+          "Transport privé",
+          "Tous les hébergements de l’itinéraire",
+          "Frais de parc",
+          "Taxes / TVA",
+          "Repas selon le programme"
+        ],
+        "excludes": [
+          "Vols internationaux",
+          "Nuits supplémentaires avant ou après le safari",
+          "Pourboires",
+          "Effets personnels, assurance et visas"
+        ]
+      }
+    },
+    "articles": {
+      "best-time-tanzania": {
+        "title": "Quand partir en Tanzanie",
+        "category": "Guide",
+        "excerpt": "Saisons de safari, Grande Migration, Zanzibar et Kilimandjaro — chaque saison raconte autre chose."
+      },
+      "great-migration-when": {
+        "title": "La Grande Migration — où aller, et quand",
+        "category": "Faune",
+        "excerpt": "Une lecture saisonnière des troupeaux — pas la promesse d’une traversée un jour donné."
+      },
+      "what-to-pack": {
+        "title": "Quoi emporter pour un safari en Tanzanie",
+        "category": "Conseils",
+        "excerpt": "Vêtements, sacs, et le peu de choses qui comptent vraiment au camp."
+      },
+      "family-safari": {
+        "title": "Safari en Tanzanie avec des enfants",
+        "category": "Famille",
+        "excerpt": "Les âges, les jours de repos et les camps qui fonctionnent avec des enfants."
+      },
+      "halal-safari": {
+        "title": "Safari halal en Tanzanie",
+        "category": "Repas et voyage",
+        "excerpt": "Nourriture, prière et respect concret sur la route."
+      },
+      "safari-zanzibar": {
+        "title": "Safari et Zanzibar — comment les lier",
+        "category": "Couples",
+        "excerpt": "Le bush, puis l’océan, sans presser ni l’un ni l’autre."
+      }
+    },
+    "articleCategories": {
+      "All": "Tout",
+      "Travel guide": "Guide",
+      "Wildlife": "Faune",
+      "Travel tips": "Conseils",
+      "Family": "Famille",
+      "Meals & travel": "Repas et voyage",
+      "Couples": "Couples"
+    },
+    "kili": {
+      "machame": "Exigeante et spectaculaire — la voie classique.",
+      "lemosho": "Belle et plus secrète, une favorite.",
+      "shira": "De larges vues de plateau.",
+      "rongai": "Plus calme et plus sèche, par le nord.",
+      "northern-circuit": "La voie la plus belle, avec un fort taux de réussite.",
+      "umbwe": "Pour alpinistes expérimentés — directe et raide.",
+      "shira-plateau": "Une option plus courte, en haute altitude."
+    }
+  }
+}

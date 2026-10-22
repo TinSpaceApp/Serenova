@@ -1,9 +1,21 @@
+import type { Metadata } from "next";
+import { ImmersiveCta } from "@/components/editorial/ImmersiveCta";
 import { PageHero } from "@/components/editorial/PageHero";
 import { MediaFrame } from "@/components/media/MediaFrame";
-import { VideoSlot } from "@/components/media/VideoSlot";
 import { Container } from "@/components/ui/Container";
+import { pageMeta } from "@/lib/page-meta";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMeta(locale, "aboutPage");
+}
 
 export default async function Page({
   params,
@@ -12,58 +24,57 @@ export default async function Page({
 }) {
   const { locale } = await params;
   setRequestLocale(asLocale(locale));
+  const t = await getTranslations("aboutPage");
 
   return (
     <>
       <PageHero
-        image="hero-savanna"
-        title="About Serenova"
-        eyebrow="A more personal way to experience Africa"
+        image="about"
+        images={["about", "vehicle-2", "bush-lunch"]}
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        lede={t("lede")}
+        titleWide
       />
-      <Container className="grid gap-12 py-16 md:grid-cols-3 md:py-20">
-        <article>
-          <h2 className="display text-[2rem]">Our story</h2>
-          <p className="mt-4 leading-8 text-muted">
-            Serenova is based in Lausanne, Switzerland, but it began on the other side
-            of the world, with a first journey to Tanzania — its people, its landscapes,
-            its particular energy. Jenny returned again and again. The house exists to
-            share that country with care, not as a catalogue.
-          </p>
-        </article>
-        <article>
-          <h2 className="display text-[2rem]">A personal approach</h2>
-          <p className="mt-4 leading-8 text-muted">
-            Every journey is designed with care, around what actually matters to you.
-            Jenny takes time to listen — whether it is a first safari or a return to a
-            place already loved.
-          </p>
-        </article>
-        <article>
-          <h2 className="display text-[2rem]">Trusted local expertise</h2>
-          <p className="mt-4 leading-8 text-muted">
-            She works with guides and partners who share the same values: a deep love
-            of Tanzania, respect for people and land, and a refusal of the generic.
-          </p>
-        </article>
-      </Container>
-      <Container className="grid items-center gap-10 pb-20 md:grid-cols-2">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.4rem] bg-sand">
-          <MediaFrame id="founder-portrait" />
+      <Container className="grid items-center gap-12 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-24 md:gap-20">
+        <div className="photo-frame group relative aspect-[4/5]">
+          <MediaFrame id="founder-portrait" className="photo-zoom" sizes="(min-width: 768px) 40vw, 100vw" />
         </div>
         <div>
-          <p className="eyebrow">Jenny · founder</p>
-          <h2 className="display mt-3 text-[2.4rem]">Creating journeys that matter</h2>
-          <p className="mt-5 text-lg leading-8 text-muted">
-            Serenova was born from a love of Africa, especially Tanzania, and from the
-            belief that travel can be truly meaningful. The aim is simple: a journey
-            designed with attention, so you come home with people and places still in
-            you.
-          </p>
+          <p className="eyebrow">{t("founderEyebrow")}</p>
+          <h2 className="display mt-4 text-[2.6rem] md:text-[4.2rem]">{t("founderTitle")}</h2>
+          <p className="mt-6 max-w-xl text-lg leading-8 text-muted">{t("founderBody1")}</p>
+          <p className="mt-5 max-w-xl text-lg leading-8 text-muted">{t("founderBody2")}</p>
+          <p className="wordmark mt-8 text-[2.6rem] text-ink">{t("signature")}</p>
+          <p className="photo-caption mt-3">{t("signatureRole")}</p>
         </div>
       </Container>
-      <Container className="pb-20">
-        <VideoSlot videoId="about-video" coverId="about" />
-      </Container>
+      <section className="bg-paper">
+        <Container className="grid gap-12 py-16 md:grid-cols-3 md:py-24">
+          <article>
+            <p className="eyebrow">01</p>
+            <h2 className="display mt-3 text-[2rem]">{t("storyTitle")}</h2>
+            <p className="mt-4 leading-8 text-muted">{t("storyBody")}</p>
+          </article>
+          <article>
+            <p className="eyebrow">02</p>
+            <h2 className="display mt-3 text-[2rem]">{t("approachTitle")}</h2>
+            <p className="mt-4 leading-8 text-muted">{t("approachBody")}</p>
+          </article>
+          <article>
+            <p className="eyebrow">03</p>
+            <h2 className="display mt-3 text-[2rem]">{t("partnersTitle")}</h2>
+            <p className="mt-4 leading-8 text-muted">{t("partnersBody")}</p>
+          </article>
+        </Container>
+      </section>
+      <ImmersiveCta
+        image="sunset-2"
+        title={t("ctaTitle")}
+        body={t("ctaBody")}
+        href="/plan"
+        label={t("ctaLabel")}
+      />
     </>
   );
 }

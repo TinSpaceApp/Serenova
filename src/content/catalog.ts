@@ -1,11 +1,18 @@
+import { journalArticlesEn } from "./journal/en";
+import { lodgeGalleries } from "./lodge-galleries";
 import type {
   Destination,
   JournalArticle,
   KiliRoute,
+  Lodge,
   Place,
   SafariPackage,
   SafariStyle,
 } from "./types";
+
+function lodgeGallery(slug: keyof typeof lodgeGalleries): string[] {
+  return [...lodgeGalleries[slug]];
+}
 
 export const destinations: Destination[] = [
   {
@@ -30,7 +37,7 @@ export const destinations: Destination[] = [
       "Often the breath after safari — sometimes the journey itself. Nungwi, Kendwa, Paje, Matemwe and Stone Town, composed with trusted local partners.",
     ],
     cta: "explore",
-    cover: "zanzibar",
+    cover: "zanzibar-beach",
   },
   {
     slug: "kenya",
@@ -75,8 +82,27 @@ export const places: Place[] = [
       "Home to over 70 large mammal species and more than 500 bird species, the Serengeti is one of the best places in Africa to see the Big Five. Open plains, riverine forest, kopjes, woodland and wetland support wildlife all year.",
       "It combines naturally with Ngorongoro Crater, Tarangire, Lake Manyara and the rest of the northern circuit.",
     ],
-    cover: "serengeti",
-    gallery: ["serengeti", "migration", "tanzania", "home-video-cover"],
+    cover: "serengeti-lions",
+    gallery: [
+      "serengeti-lions",
+      "serengeti-lion",
+      "serengeti-river",
+      "migration-2",
+      "lodge-shuhudia",
+      "lodge-moyo-central",
+      "lodge-salinero",
+      "lodge-river-camp",
+    ],
+    lodges: [
+      "lodge-shuhudia",
+      "lodge-tukaone",
+      "lodge-moyo-north",
+      "lodge-moyo-central",
+      "lodge-kubu-kubu",
+      "lodge-river-camp",
+      "lodge-sametu",
+      "lodge-salinero",
+    ],
     documented: true,
   },
   {
@@ -92,8 +118,26 @@ export const places: Place[] = [
       "A UNESCO World Heritage Site, the Ngorongoro Conservation Area protects remarkable wildlife and the traditional way of life of the Maasai people.",
       "It is easily reached from Arusha and often combined with Tarangire, Lake Manyara and the Serengeti.",
     ],
-    cover: "ngorongoro",
-    gallery: ["ngorongoro", "tanzania", "styles"],
+    cover: "ngorongoro-2",
+    gallery: [
+      "ngorongoro-2",
+      "ngorongoro-buffalo",
+      "sunset-ngorongoro",
+      "lodge-crater-edge",
+      "lodge-serenity",
+      "lodge-gran-melia-ngorongoro",
+      "lodge-lions-paw",
+    ],
+    lodges: [
+      "lodge-serenity",
+      "lodge-crater-edge",
+      "lodge-gran-melia-ngorongoro",
+      "lodge-lions-paw",
+      "lodge-kitela",
+      "lodge-forest-hill",
+      "lodge-bougainvillea",
+      "lodge-lake-masek",
+    ],
     documented: true,
   },
   {
@@ -109,8 +153,23 @@ export const places: Place[] = [
       "Home to one of the highest concentrations of elephants in Africa, Tarangire also holds lion, leopard, cheetah, giraffe, zebra, buffalo, wildebeest and over 550 bird species.",
       "It can be visited year-round and combines perfectly with Lake Manyara, Ngorongoro and the Serengeti.",
     ],
-    cover: "tarangire",
-    gallery: ["tarangire", "tanzania", "home-video-cover"],
+    cover: "tarangire-elephant",
+    gallery: [
+      "tarangire-elephant",
+      "tarangire-lion",
+      "lodge-kuro-treetops",
+      "lodge-baobab-tented",
+      "lodge-elephant-springs",
+      "lodge-nyuki",
+    ],
+    lodges: [
+      "lodge-baobab-tented",
+      "lodge-elephant-springs",
+      "lodge-kuro-treetops",
+      "lodge-tarangire-nature",
+      "lodge-farm-of-dreams",
+      "lodge-nyuki",
+    ],
     documented: true,
   },
   {
@@ -121,7 +180,8 @@ export const places: Place[] = [
     tags: ["Rift valley", "Birdlife"],
     summary: "A compact rift-valley park of forest, lake and famous tree-climbing lions.",
     cover: "manyara",
-    gallery: ["manyara"],
+    gallery: ["manyara", "manyara-2", "lodge-bougainvillea", "lodge-forest-hill"],
+    lodges: ["lodge-farm-of-dreams", "lodge-bougainvillea", "lodge-forest-hill", "lodge-kitela"],
     documented: false,
   },
   {
@@ -131,8 +191,22 @@ export const places: Place[] = [
     country: "tanzania",
     tags: ["Gateway"],
     summary: "The northern-circuit gateway: arrivals, briefings and the first night.",
-    cover: "about",
-    gallery: [],
+    cover: "vehicle-2",
+    gallery: [
+      "vehicle-2",
+      "lodge-tulia",
+      "lodge-gran-melia-arusha",
+      "lodge-under-the-shade",
+      "lodge-mount-meru",
+      "lodge-kika",
+    ],
+    lodges: [
+      "lodge-tulia",
+      "lodge-under-the-shade",
+      "lodge-mount-meru",
+      "lodge-gran-melia-arusha",
+      "lodge-kika",
+    ],
     documented: false,
   },
   {
@@ -143,7 +217,7 @@ export const places: Place[] = [
     tags: ["Momella", "Meru"],
     summary: "A green park of lakes, colobus monkeys and views of Mount Meru.",
     cover: "arusha-park",
-    gallery: [],
+    gallery: ["arusha-park", "arusha-fig"],
     documented: false,
   },
   {
@@ -154,7 +228,7 @@ export const places: Place[] = [
     tags: ["Summit"],
     summary: "Africa’s highest peak — treated in full on its own page.",
     cover: "styles",
-    gallery: ["styles"],
+    gallery: ["styles", "kilimanjaro-plants"],
     documented: false,
   },
   {
@@ -164,8 +238,8 @@ export const places: Place[] = [
     country: "tanzania",
     tags: ["Flamingos"],
     summary: "A remote alkaline lake and flamingo breeding ground at the foot of Ol Doinyo Lengai.",
-    cover: "lake-natron",
-    gallery: [],
+    cover: "lake-natron-falls",
+    gallery: ["lake-natron-falls", "lake-natron"],
     documented: false,
   },
   {
@@ -176,7 +250,7 @@ export const places: Place[] = [
     tags: ["Coast"],
     summary: "Where bush meets the Indian Ocean.",
     cover: "saadani",
-    gallery: [],
+    gallery: ["saadani", "zanzibar-coast"],
     documented: false,
   },
   {
@@ -187,7 +261,7 @@ export const places: Place[] = [
     tags: ["Highlands"],
     summary: "A highland park of wildflowers, often called the Serengeti of flowers.",
     cover: "kitulo",
-    gallery: [],
+    gallery: ["kitulo", "udzungwa"],
     documented: false,
   },
   {
@@ -198,7 +272,7 @@ export const places: Place[] = [
     tags: ["Rufiji"],
     summary: "One of Africa’s largest parks: river, boat safari and wild southern Tanzania.",
     cover: "nyerere",
-    gallery: [],
+    gallery: ["nyerere", "ruaha", "mikumi"],
     documented: false,
   },
   {
@@ -209,7 +283,7 @@ export const places: Place[] = [
     tags: ["South"],
     summary: "A vast, less-visited southern park of baobabs, lions and the Great Ruaha River.",
     cover: "ruaha",
-    gallery: [],
+    gallery: ["ruaha", "tarangire", "katavi"],
     documented: false,
   },
   {
@@ -220,7 +294,7 @@ export const places: Place[] = [
     tags: ["South"],
     summary: "An accessible southern park on the road toward Nyerere and the coast.",
     cover: "mikumi",
-    gallery: [],
+    gallery: ["mikumi", "nyerere"],
     documented: false,
   },
   {
@@ -231,7 +305,7 @@ export const places: Place[] = [
     tags: ["Forest"],
     summary: "Eastern-arc rainforest, endemic primates and waterfall walks.",
     cover: "udzungwa",
-    gallery: [],
+    gallery: ["udzungwa", "gombe"],
     documented: false,
   },
   {
@@ -242,7 +316,7 @@ export const places: Place[] = [
     tags: ["Remote"],
     summary: "One of Tanzania’s wildest and least-visited parks.",
     cover: "katavi",
-    gallery: [],
+    gallery: ["katavi", "walking-giraffe"],
     documented: false,
   },
   {
@@ -253,7 +327,7 @@ export const places: Place[] = [
     tags: ["Chimpanzees"],
     summary: "Lake Tanganyika and habituated chimpanzees on forested slopes.",
     cover: "mahale",
-    gallery: [],
+    gallery: ["mahale", "gombe"],
     documented: false,
   },
   {
@@ -264,7 +338,7 @@ export const places: Place[] = [
     tags: ["Chimpanzees"],
     summary: "Jane Goodall’s lakeshore forest — intimate chimpanzee tracking.",
     cover: "gombe",
-    gallery: [],
+    gallery: ["gombe", "mahale"],
     documented: false,
   },
   {
@@ -274,8 +348,8 @@ export const places: Place[] = [
     country: "tanzania",
     tags: ["Heritage"],
     summary: "A historic coastal town of stone, dhows and Swahili memory.",
-    cover: "bagamoyo",
-    gallery: [],
+    cover: "bagamoyo-boma",
+    gallery: ["bagamoyo-boma", "culture-2"],
     documented: false,
   },
 ];
@@ -300,7 +374,7 @@ export const styles: SafariStyle[] = [
     name: "Walking Safari",
     summary:
       "Leave the vehicle. Walk with experienced guides through tracks, sounds and details you would otherwise miss.",
-    cover: "walking",
+    cover: "walking-giraffe",
   },
   {
     slug: "photography",
@@ -328,7 +402,7 @@ export const styles: SafariStyle[] = [
     name: "Beach & Zanzibar Holiday",
     summary:
       "White sand and Swahili towns after the bush, or a journey that is the island alone.",
-    cover: "zanzibar",
+    cover: "zanzibar-beach",
   },
   {
     slug: "great-migration",
@@ -337,6 +411,37 @@ export const styles: SafariStyle[] = [
       "Follow one of nature’s great movements across the Serengeti — herds, river and timing.",
     cover: "migration",
   },
+];
+
+export const lodges: Lodge[] = [
+  { slug: "lodge-tulia", name: "Tulia Boutique & Spa", area: "Arusha", place: "arusha-city", cover: "lodge-tulia", gallery: lodgeGallery("lodge-tulia") },
+  { slug: "lodge-under-the-shade", name: "Under the Shade", area: "Arusha", place: "arusha-city", cover: "lodge-under-the-shade", gallery: lodgeGallery("lodge-under-the-shade") },
+  { slug: "lodge-mount-meru", name: "Mount Meru Hotel", area: "Arusha", place: "arusha-city", cover: "lodge-mount-meru", gallery: lodgeGallery("lodge-mount-meru") },
+  { slug: "lodge-gran-melia-arusha", name: "Gran Meliá Arusha", area: "Arusha", place: "arusha-city", cover: "lodge-gran-melia-arusha", gallery: lodgeGallery("lodge-gran-melia-arusha") },
+  { slug: "lodge-kika", name: "Kika Resort", area: "Arusha", place: "arusha-city", cover: "lodge-kika", gallery: lodgeGallery("lodge-kika") },
+  { slug: "lodge-farm-of-dreams", name: "Farm of Dreams Lodge", area: "Karatu", place: "tarangire", cover: "lodge-farm-of-dreams", gallery: lodgeGallery("lodge-farm-of-dreams") },
+  { slug: "lodge-baobab-tented", name: "Baobab Tented Camp", area: "Tarangire", place: "tarangire", cover: "lodge-baobab-tented", gallery: lodgeGallery("lodge-baobab-tented") },
+  { slug: "lodge-elephant-springs", name: "Tarangire Elephant Springs", area: "Tarangire", place: "tarangire", cover: "lodge-elephant-springs", gallery: lodgeGallery("lodge-elephant-springs") },
+  { slug: "lodge-kuro-treetops", name: "Kuro Treetops Lodge", area: "Tarangire", place: "tarangire", cover: "lodge-kuro-treetops", gallery: lodgeGallery("lodge-kuro-treetops") },
+  { slug: "lodge-tarangire-nature", name: "Tarangire Nature Camp", area: "Tarangire", place: "tarangire", cover: "lodge-tarangire-nature", gallery: lodgeGallery("lodge-tarangire-nature") },
+  { slug: "lodge-nyuki", name: "Nyuki Camp", area: "Tarangire", place: "tarangire", cover: "lodge-nyuki", gallery: lodgeGallery("lodge-nyuki") },
+  { slug: "lodge-bougainvillea", name: "Bougainvillea Safari Lodge", area: "Karatu", place: "ngorongoro", cover: "lodge-bougainvillea", gallery: lodgeGallery("lodge-bougainvillea") },
+  { slug: "lodge-forest-hill", name: "Forest Hill Hotel", area: "Karatu", place: "ngorongoro", cover: "lodge-forest-hill", gallery: lodgeGallery("lodge-forest-hill") },
+  { slug: "lodge-kitela", name: "Kitela Lodge", area: "Karatu", place: "ngorongoro", cover: "lodge-kitela", gallery: lodgeGallery("lodge-kitela") },
+  { slug: "lodge-serenity", name: "Serenity Camp", area: "Ngorongoro", place: "ngorongoro", cover: "lodge-serenity", gallery: lodgeGallery("lodge-serenity") },
+  { slug: "lodge-crater-edge", name: "Crater Edge", area: "Ngorongoro", place: "ngorongoro", cover: "lodge-crater-edge", gallery: lodgeGallery("lodge-crater-edge") },
+  { slug: "lodge-gran-melia-ngorongoro", name: "Gran Meliá Ngorongoro", area: "Ngorongoro", place: "ngorongoro", cover: "lodge-gran-melia-ngorongoro", gallery: lodgeGallery("lodge-gran-melia-ngorongoro") },
+  { slug: "lodge-lions-paw", name: "Ngorongoro Lion’s Paw Camp", area: "Ngorongoro", place: "ngorongoro", cover: "lodge-lions-paw", gallery: lodgeGallery("lodge-lions-paw") },
+  { slug: "lodge-lake-masek", name: "Lake Masek Tented Lodge", area: "Ndutu", place: "ngorongoro", cover: "lodge-lake-masek", gallery: lodgeGallery("lodge-lake-masek") },
+  { slug: "lodge-shuhudia", name: "Shuhudia Adventure Camp", area: "Serengeti", place: "serengeti", cover: "lodge-shuhudia", gallery: lodgeGallery("lodge-shuhudia") },
+  { slug: "lodge-tukaone", name: "Tukaone Serengeti Camp", area: "Central Serengeti", place: "serengeti", cover: "lodge-tukaone", gallery: lodgeGallery("lodge-tukaone") },
+  { slug: "lodge-kubu-kubu", name: "Kubu Kubu Tented Lodge", area: "Central Serengeti", place: "serengeti", cover: "lodge-kubu-kubu", gallery: lodgeGallery("lodge-kubu-kubu") },
+  { slug: "lodge-moyo-central", name: "Moyo Camp Central", area: "Central Serengeti", place: "serengeti", cover: "lodge-moyo-central", gallery: lodgeGallery("lodge-moyo-central") },
+  { slug: "lodge-moyo-north", name: "Moyo Camp North", area: "Northern Serengeti", place: "serengeti", cover: "lodge-moyo-north", gallery: lodgeGallery("lodge-moyo-north") },
+  { slug: "lodge-river-camp", name: "Serengeti River Camp", area: "Northern Serengeti", place: "serengeti", cover: "lodge-river-camp", gallery: lodgeGallery("lodge-river-camp") },
+  { slug: "lodge-sametu", name: "Sametu Camp", area: "Serengeti", place: "serengeti", cover: "lodge-sametu", gallery: lodgeGallery("lodge-sametu") },
+  { slug: "lodge-salinero", name: "Salinero Serengeti Lodge", area: "Serengeti", place: "serengeti", cover: "lodge-salinero", gallery: lodgeGallery("lodge-salinero") },
+  { slug: "lodge-the-mora", name: "The Mora Zanzibar", area: "Zanzibar", place: "zanzibar", cover: "lodge-the-mora", gallery: lodgeGallery("lodge-the-mora") },
 ];
 
 const sharedIncludes = [
@@ -381,8 +486,9 @@ export const packages: SafariPackage[] = [
       "Private safari vehicle and professional guide",
     ],
     stays: [
-      { name: "Farm of Dreams Lodge", role: "Main stay", photo: "lodge-farm-of-dreams" },
-      { name: "Bougainvillea Safari Lodge", role: "Alternative", photo: "lodge-bougainvillea" },
+      { name: "Farm of Dreams Lodge", role: "Karatu / Tarangire", photo: "lodge-farm-of-dreams" },
+      { name: "Baobab Tented Camp", role: "Tarangire alternative", photo: "lodge-baobab-tented" },
+      { name: "Bougainvillea Safari Lodge", role: "Karatu alternative", photo: "lodge-bougainvillea" },
     ],
     prices: [
       { people: 1, usd: 1210 },
@@ -395,8 +501,15 @@ export const packages: SafariPackage[] = [
     includes: sharedIncludes,
     excludes: [...sharedExcludes, "Tips (suggested USD 15 per person per day)"],
     mapPoints: ["Arusha", "Tarangire", "Ngorongoro"],
-    cover: "tarangire",
-    gallery: ["tarangire", "ngorongoro"],
+    cover: "tarangire-elephant",
+    gallery: [
+      "tarangire-elephant",
+      "ngorongoro-2",
+      "manyara-2",
+      ...lodgeGallery("lodge-farm-of-dreams"),
+      ...lodgeGallery("lodge-baobab-tented"),
+      ...lodgeGallery("lodge-bougainvillea"),
+    ],
     pricesPending: true,
   },
   {
@@ -429,8 +542,8 @@ export const packages: SafariPackage[] = [
       "Flexible for couples, families or small groups",
     ],
     stays: [
-      { name: "Serengeti Serena Lodge", role: "Main stay (as printed)", photo: "lodge" },
-      { name: "Shuhudia Adventure Camp", role: "Listed alternative", photo: "lodge-shuhudia" },
+      { name: "Shuhudia Adventure Camp", role: "Serengeti (or similar)", photo: "lodge-shuhudia" },
+      { name: "Kubu Kubu Tented Lodge", role: "Serengeti alternative", photo: "lodge-kubu-kubu" },
     ],
     prices: [
       { people: 1, usd: 3450 },
@@ -454,8 +567,14 @@ export const packages: SafariPackage[] = [
       "Tips",
     ],
     mapPoints: ["Arusha", "Serengeti", "Ngorongoro"],
-    cover: "serengeti",
-    gallery: ["serengeti", "ngorongoro"],
+    cover: "serengeti-lions",
+    gallery: [
+      "serengeti-lions",
+      "ngorongoro-buffalo",
+      "serengeti-river",
+      ...lodgeGallery("lodge-shuhudia"),
+      ...lodgeGallery("lodge-kubu-kubu"),
+    ],
     pricesPending: true,
   },
   {
@@ -498,8 +617,17 @@ export const packages: SafariPackage[] = [
     includes: sharedIncludes,
     excludes: [...sharedExcludes, "Activities in Zanzibar if added"],
     mapPoints: ["Arusha", "Tarangire", "Ngorongoro", "Northern Serengeti"],
-    cover: "migration",
-    gallery: ["migration", "serengeti", "ngorongoro", "tarangire"],
+    cover: "migration-2",
+    gallery: [
+      "migration-2",
+      "serengeti-lion",
+      "ndutu-calving",
+      "tarangire-lion",
+      ...lodgeGallery("lodge-under-the-shade"),
+      ...lodgeGallery("lodge-farm-of-dreams"),
+      ...lodgeGallery("lodge-serenity"),
+      ...lodgeGallery("lodge-moyo-north"),
+    ],
     pricesPending: true,
   },
   {
@@ -529,7 +657,7 @@ export const packages: SafariPackage[] = [
     ],
     stays: [
       { name: "Tulia Boutique & Spa", role: "Arusha", photo: "lodge-tulia" },
-      { name: "Ndutu Camp Migration", role: "Ndutu", photo: "lodge" },
+      { name: "Lake Masek Tented Lodge", role: "Ndutu (or similar)", photo: "lodge-lake-masek" },
       { name: "Tukaone Serengeti Camp", role: "Central Serengeti", photo: "lodge-tukaone" },
     ],
     prices: [
@@ -543,8 +671,15 @@ export const packages: SafariPackage[] = [
     includes: sharedIncludes,
     excludes: sharedExcludes,
     mapPoints: ["Arusha", "Ngorongoro", "Ndutu", "Serengeti"],
-    cover: "ndutu",
-    gallery: ["ndutu", "serengeti", "ngorongoro"],
+    cover: "ndutu-wildlife",
+    gallery: [
+      "ndutu-wildlife",
+      "ndutu-calving",
+      "ngorongoro-2",
+      ...lodgeGallery("lodge-tulia"),
+      ...lodgeGallery("lodge-lake-masek"),
+      ...lodgeGallery("lodge-tukaone"),
+    ],
     pricesPending: true,
   },
   {
@@ -564,13 +699,26 @@ export const packages: SafariPackage[] = [
       "Luxury camps",
       "Private guiding",
     ],
-    stays: [{ name: "Luxury camps as printed", role: "To confirm", photo: "lodge" }],
+    stays: [
+      { name: "Gran Meliá Ngorongoro", role: "Illustrative luxury stay", photo: "lodge-gran-melia-ngorongoro" },
+      { name: "Kuro Treetops Lodge", role: "Illustrative luxury stay", photo: "lodge-kuro-treetops" },
+      { name: "Serengeti River Camp", role: "Illustrative luxury stay", photo: "lodge-river-camp" },
+      { name: "Moyo Camp North", role: "Illustrative luxury stay", photo: "lodge-moyo-north" },
+    ],
     prices: [{ people: 2, usd: 8695 }],
     includes: sharedIncludes,
     excludes: sharedExcludes,
     mapPoints: ["Arusha", "Northern Serengeti"],
-    cover: "serengeti",
-    gallery: ["serengeti", "migration"],
+    cover: "serengeti-lions",
+    gallery: [
+      "serengeti-lions",
+      "migration-2",
+      "serengeti-river",
+      ...lodgeGallery("lodge-gran-melia-ngorongoro"),
+      ...lodgeGallery("lodge-kuro-treetops"),
+      ...lodgeGallery("lodge-river-camp"),
+      ...lodgeGallery("lodge-moyo-north"),
+    ],
     pricesPending: true,
   },
   {
@@ -586,13 +734,24 @@ export const packages: SafariPackage[] = [
       { title: "Days 1–10", text: "Photography-led northern circuit as printed on maquette p.32 — full itinerary pending confirmation." },
     ],
     highlights: ["Time for photography", "Iconic northern parks", "Guided game drives"],
-    stays: [{ name: "Camps as printed", role: "To confirm", photo: "lodge" }],
+    stays: [
+      { name: "Kuro Treetops Lodge", role: "Illustrative photography stay", photo: "lodge-kuro-treetops" },
+      { name: "Crater Edge", role: "Illustrative photography stay", photo: "lodge-crater-edge" },
+      { name: "Sametu Camp", role: "Illustrative photography stay", photo: "lodge-sametu" },
+    ],
     prices: [{ people: 2, usd: 5380 }],
     includes: sharedIncludes,
     excludes: sharedExcludes,
     mapPoints: ["Arusha", "Tarangire", "Serengeti"],
-    cover: "serengeti",
-    gallery: ["serengeti", "cta"],
+    cover: "serengeti-lion",
+    gallery: [
+      "serengeti-lion",
+      "photography",
+      "sunset-ngorongoro",
+      ...lodgeGallery("lodge-kuro-treetops"),
+      ...lodgeGallery("lodge-crater-edge"),
+      ...lodgeGallery("lodge-sametu"),
+    ],
     pricesPending: true,
   },
   {
@@ -610,15 +769,23 @@ export const packages: SafariPackage[] = [
     ],
     highlights: ["Luxury safari", "Zanzibar after the bush", "A single composed journey"],
     stays: [
-      { name: "Safari camps as printed", role: "Bush", photo: "lodge" },
-      { name: "Zanzibar lodge as printed", role: "Ocean", photo: "lodge" },
+      { name: "Moyo Camp Central", role: "Illustrative bush stay", photo: "lodge-moyo-central" },
+      { name: "Gran Meliá Ngorongoro", role: "Illustrative bush stay", photo: "lodge-gran-melia-ngorongoro" },
+      { name: "The Mora Zanzibar", role: "Illustrative ocean stay", photo: "lodge-the-mora" },
     ],
     prices: [{ people: 2, usd: 7935 }],
     includes: sharedIncludes,
     excludes: sharedExcludes,
     mapPoints: ["Arusha", "Serengeti", "Zanzibar"],
-    cover: "zanzibar",
-    gallery: ["tanzania", "zanzibar"],
+    cover: "zanzibar-beach",
+    gallery: [
+      "serengeti-river",
+      "zanzibar-beach",
+      "zanzibar-coast",
+      ...lodgeGallery("lodge-moyo-central"),
+      ...lodgeGallery("lodge-gran-melia-ngorongoro"),
+      ...lodgeGallery("lodge-the-mora"),
+    ],
     pricesPending: true,
   },
 ];
@@ -633,64 +800,14 @@ export const kiliRoutes: KiliRoute[] = [
   { slug: "shira-plateau", name: "Shira Plateau", summary: "A shorter high-altitude option.", cover: "styles" },
 ];
 
-export const articles: JournalArticle[] = [
-  {
-    slug: "best-time-tanzania",
-    title: "Best Time to Visit Tanzania",
-    category: "Travel guide",
-    excerpt:
-      "Safari seasons, the Great Migration, Zanzibar and Kilimanjaro — every season has a different story.",
-    cover: "tanzania",
-    published: true,
-    body: [
-      "Tanzania can be visited throughout the year, but the best time depends on what you hope to experience. Classic wildlife, the Great Migration, tropical beaches or climbing Kilimanjaro each favour a different window.",
-      "The dry season, June to October, is the most popular safari time. Wildlife gathers around water, grass is thinner and animals are easier to spot. It is ideal for classic game viewing, the Big Five, Serengeti and Ngorongoro, Tarangire and Manyara, and later-season river crossings.",
-      "The green season, November to May, is quieter, beautiful for photography, rich in birds and often kinder on rates. Short rains usually fall in November and December; April and May can be heavier.",
-      "The Great Migration moves with the seasons: January to March in southern Serengeti and Ndutu (calving); April to June the herds move north; July to October northern Serengeti and the Mara River, depending on rain.",
-      "Zanzibar is excellent June to October and December to March. March to May is usually wetter. Kilimanjaro is generally kindest January to March and June to October.",
-    ],
-  },
-  {
-    slug: "great-migration-when",
-    title: "The Great Migration — Where to Go and When",
-    category: "Wildlife",
-    excerpt: "A seasonal reading of the herds — not a promise of a crossing on a given day.",
-    cover: "migration",
-    published: false,
-  },
-  {
-    slug: "what-to-pack",
-    title: "What to Pack for a Safari in Tanzania",
-    category: "Travel tips",
-    excerpt: "Clothing, bags and the few things that actually matter in camp.",
-    cover: "about",
-    published: false,
-  },
-  {
-    slug: "family-safari",
-    title: "Tanzania Safari with Kids",
-    category: "Family",
-    excerpt: "Ages, rest days and camps that work with children.",
-    cover: "home-video-cover",
-    published: false,
-  },
-  {
-    slug: "halal-safari",
-    title: "Halal-Friendly Safari in Tanzania",
-    category: "Meals & travel",
-    excerpt: "Food, prayer and practical respect on the road.",
-    cover: "tanzania",
-    published: false,
-  },
-  {
-    slug: "safari-zanzibar",
-    title: "Safari & Zanzibar — How to Combine Both",
-    category: "Couples",
-    excerpt: "Bush then ocean, without rushing either.",
-    cover: "zanzibar",
-    published: false,
-  },
-];
+export const articles: JournalArticle[] = journalArticlesEn.map((item) => ({
+  slug: item.slug,
+  title: item.title,
+  category: item.category,
+  excerpt: item.excerpt,
+  cover: item.cover,
+  published: item.published,
+}));
 
 export function getDestination(slug: string) {
   return destinations.find((item) => item.slug === slug);
@@ -702,6 +819,52 @@ export function getPlace(slug: string) {
 
 export function getStyle(slug: string) {
   return styles.find((item) => item.slug === slug);
+}
+
+export function getLodge(slug: string) {
+  return lodges.find((item) => item.slug === slug);
+}
+
+export function getLodgesForPlace(placeSlug: string) {
+  const place = places.find((item) => item.slug === placeSlug);
+  if (place?.lodges?.length) {
+    return place.lodges
+      .map((slug) => lodges.find((item) => item.slug === slug))
+      .filter((item): item is Lodge => Boolean(item));
+  }
+  return lodges.filter((item) => item.place === placeSlug);
+}
+
+export function getLodgeByPhoto(photoId: string) {
+  return lodges.find(
+    (item) => item.cover === photoId || item.slug === photoId || item.gallery.includes(photoId),
+  );
+}
+
+export function getLodgePhotos(photoId: string) {
+  const lodge = getLodgeByPhoto(photoId);
+  return lodge?.gallery.length ? lodge.gallery : [photoId];
+}
+
+export function allLodgeImageIds() {
+  return lodges.flatMap((item) => item.gallery);
+}
+
+export const styleLodgeIds: Record<string, string[]> = {
+  honeymoon: ["lodge-crater-edge", "lodge-the-mora", "lodge-gran-melia-ngorongoro", "lodge-moyo-central"],
+  family: ["lodge-tulia", "lodge-farm-of-dreams", "lodge-kika", "lodge-forest-hill"],
+  "beach-zanzibar": ["lodge-the-mora"],
+  photography: ["lodge-kuro-treetops", "lodge-crater-edge", "lodge-sametu"],
+  "great-migration": ["lodge-moyo-north", "lodge-lake-masek", "lodge-serenity", "lodge-tukaone"],
+  walking: ["lodge-nyuki", "lodge-tarangire-nature", "lodge-baobab-tented"],
+  "fly-in": ["lodge-river-camp", "lodge-moyo-north", "lodge-moyo-central"],
+  "halal-friendly": ["lodge-tulia", "lodge-under-the-shade", "lodge-kika"],
+};
+
+export function getLodgesForStyle(styleSlug: string) {
+  return (styleLodgeIds[styleSlug] ?? [])
+    .map((slug) => lodges.find((item) => item.slug === slug))
+    .filter((item): item is Lodge => Boolean(item));
 }
 
 export function getPackage(slug: string) {

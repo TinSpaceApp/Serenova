@@ -1,16 +1,38 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/editorial/PageHero";
-import { MediaFrame } from "@/components/media/MediaFrame";
+import { ImmersiveCta } from "@/components/editorial/ImmersiveCta";
+import { LodgeCard } from "@/components/media/LodgeCard";
 import { MediaGallery } from "@/components/media/MediaGallery";
-import { VideoSlot } from "@/components/media/VideoSlot";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { getPackage, packages } from "@/content/catalog";
+import { getLodgeByPhoto, getLodgePhotos, getPackage, packages } from "@/content/catalog";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
 
 export function generateStaticParams() {
   return packages.map((item) => ({ slug: item.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const item = getPackage(slug);
+  if (!item) {
+    return {};
+  }
+  const copy = await getTranslations({
+    locale: asLocale(locale),
+    namespace: `catalog.packages.${slug}`,
+  });
+  return {
+    title: copy("name"),
+    description: copy("overview"),
+  };
 }
 
 export default async function Page({
@@ -24,103 +46,124 @@ export default async function Page({
   if (!item) {
     notFound();
   }
+  const page = await getTranslations("journeyPage");
+  const copy = await getTranslations(`catalog.packages.${item.slug}`);
+  const tier = await getTranslations("catalog.tier");
+  const ui = await getTranslations("ui");
+  const stayRoles = await getTranslations("catalog.stayRoles");
+  const itinerary = copy.raw("itinerary") as { title: string; text: string }[];
+  const highlights = copy.raw("highlights") as string[];
+  const includes = copy.raw("includes") as string[];
+  const excludes = copy.raw("excludes") as string[];
 
   return (
     <>
       <PageHero
         image={item.cover}
-        eyebrow={`${item.days} days · ${item.category} · ${item.audience}`}
-        title={item.name}
-        lede={item.subtitle}
+        images={[
+          item.cover,
+          ...item.gallery.filter((id) => id !== item.cover && !id.startsWith("lodge-")),
+        ]}
+        eyebrow={`${item.days} ${ui("days")} · ${tier(item.category)} · ${copy("audience")}`}
+        title={copy("name")}
+        lede={copy("subtitle")}
       />
-      <Container className="grid gap-12 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-20">
+      <Container className="grid gap-16 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
         <div>
-          <p className="eyebrow">Overview</p>
-          <p className="mt-4 text-lg leading-8 text-muted">{item.overview}</p>
-          <p className="eyebrow mt-10">Itinerary</p>
-          <ol className="mt-4 space-y-5">
-            {item.itinerary.map((day) => (
-              <li key={day.title}>
-                <h2 className="font-display text-2xl">{day.title}</h2>
-                <p className="mt-2 leading-7 text-muted">{day.text}</p>
+          <p className="eyebrow">{page("overview")}</p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">{copy("overview")}</p>
+          <p className="eyebrow mt-14">{page("itinerary")}</p>
+          <ol className="mt-8">
+            {itinerary.map((day, index) => (
+              <li key={day.title} className="grid gap-4 border-t border-line py-7 md:grid-cols-[5rem_1fr]">
+                <span className="display text-[2rem] text-bronze">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h2 className="display text-[1.85rem]">{day.title}</h2>
+                  <p className="mt-3 leading-8 text-muted">{day.text}</p>
+                </div>
               </li>
             ))}
           </ol>
         </div>
-        <div>
-          <p className="eyebrow">Highlights</p>
-          <ul className="mt-4 space-y-2 text-muted">
-            {item.highlights.map((highlight) => (
-              <li key={highlight}>— {highlight}</li>
+        <aside className="self-start border-t border-line pt-8 md:sticky md:top-28">
+          <p className="eyebrow">{page("highlights")}</p>
+          <ul className="mt-5 space-y-3 text-muted">
+            {highlights.map((highlight) => (
+              <li key={highlight}>{highlight}</li>
             ))}
           </ul>
-          <p className="eyebrow mt-10">Indicative price per person (USD)</p>
+          <p className="eyebrow mt-12">{page("price")}</p>
           <table className="mt-4 w-full text-left font-sans text-sm">
             <thead>
               <tr className="text-muted">
-                <th className="py-2 font-medium">Travellers</th>
-                <th className="py-2 font-medium">From</th>
+                <th className="py-2 font-medium">{page("travellers")}</th>
+                <th className="py-2 font-medium">{page("fromUsd")}</th>
               </tr>
             </thead>
             <tbody>
               {item.prices.map((price) => (
                 <tr key={price.people} className="border-t border-line">
-                  <td className="py-2">{price.people}</td>
-                  <td className="py-2">${price.usd.toLocaleString("en-US")}</td>
+                  <td className="py-2.5">{price.people}</td>
+                  <td className="py-2.5">${price.usd.toLocaleString("en-US")}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <p className="mt-3 text-sm text-muted">
-            Prices vary by season, camp and availability. They are not a confirmation.
-          </p>
-        </div>
+          <p className="mt-4 text-sm leading-6 text-muted">{page("priceNote")}</p>
+          <div className="mt-8">
+            <Button href={`/plan?package=${item.slug}`}>{page("ctaLabel")}</Button>
+          </div>
+        </aside>
       </Container>
-      <Container className="grid gap-10 pb-16 md:grid-cols-2">
+      <Container className="grid gap-12 border-t border-line py-16 md:grid-cols-2">
         <div>
-          <p className="eyebrow">Includes</p>
-          <ul className="mt-4 space-y-2 text-muted">
-            {item.includes.map((line) => (
-              <li key={line}>— {line}</li>
+          <p className="eyebrow">{page("includes")}</p>
+          <ul className="mt-5 space-y-2 text-muted">
+            {includes.map((line) => (
+              <li key={line}>{line}</li>
             ))}
           </ul>
         </div>
         <div>
-          <p className="eyebrow">Does not include</p>
-          <ul className="mt-4 space-y-2 text-muted">
-            {item.excludes.map((line) => (
-              <li key={line}>— {line}</li>
+          <p className="eyebrow">{page("excludes")}</p>
+          <ul className="mt-5 space-y-2 text-muted">
+            {excludes.map((line) => (
+              <li key={line}>{line}</li>
             ))}
           </ul>
         </div>
       </Container>
       <Container className="pb-16">
-        <p className="eyebrow">Accommodations</p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {item.stays.map((stay) => (
-            <article key={stay.name} className="overflow-hidden rounded-2xl bg-ivory">
-              <div className="relative aspect-[16/10]">
-                <MediaFrame id={stay.photo} sizes="(min-width: 768px) 33vw, 100vw" />
-              </div>
-              <div className="p-4">
-                <h3 className="font-display text-xl">{stay.name}</h3>
-                <p className="mt-1 text-sm text-muted">{stay.role}</p>
-              </div>
-            </article>
-          ))}
+        <p className="eyebrow">{page("stays")}</p>
+        <p className="mt-4 max-w-xl text-sm leading-7 text-muted">{page("staysNote")}</p>
+        <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {item.stays.map((stay) => {
+            const lodge = getLodgeByPhoto(stay.photo);
+            return (
+              <LodgeCard
+                key={stay.name}
+                name={stay.name}
+                area={stayRoles.has(stay.role) ? stayRoles(stay.role) : stay.role}
+                photos={lodge ? lodge.gallery : getLodgePhotos(stay.photo)}
+              />
+            );
+          })}
         </div>
-        <p className="eyebrow mt-12">Map</p>
-        <p className="mt-3 text-muted">Route points: {item.mapPoints.join(" → ")}</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button href={`/plan?package=${item.slug}`}>Plan this journey</Button>
-        </div>
+        <p className="mt-10 font-sans text-sm text-muted">
+          {page("route")}: {item.mapPoints.join(" → ")}
+        </p>
       </Container>
       <Container className="pb-20">
         <MediaGallery ids={item.gallery} />
-        <div className="mt-10">
-          <VideoSlot videoId={`${item.slug}-video`} coverId={item.cover} />
-        </div>
       </Container>
+      <ImmersiveCta
+        image={item.cover}
+        title={page("ctaTitle")}
+        href={`/plan?package=${item.slug}`}
+        label={page("ctaLabel")}
+      />
     </>
   );
 }
