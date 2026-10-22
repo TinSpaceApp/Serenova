@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Serenova — tailored safaris in East Africa",
+    "description": "A travel house in Lausanne. Jenny designs personal safaris in Tanzania, Zanzibar and Kilimanjaro — at your pace, never from a catalogue."
+  },
+  "nav": {
+    "menu": "Menu",
+    "close": "Close",
+    "plan": "Plan your trip",
+    "destinations": "Destinations",
+    "tanzania": "Tanzania",
+    "zanzibar": "Zanzibar",
+    "kilimanjaro": "Kilimanjaro",
+    "styles": "Safari styles",
+    "journeys": "Journeys",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "Contact",
+    "reviews": "Reviews",
+    "language": "Language"
+  },
+  "home": {
+    "heroLine1": "Wilder moments.",
+    "heroLine2": "Brighter lives.",
+    "introEyebrow": "Tailor-made safari experiences",
+    "introTitle": "Discover East Africa with Serenova",
+    "introBody": "Extraordinary places. Meaningful journeys. We design personal safaris that bring you closer to the land, to unforgettable wildlife, and to moments that stay.",
+    "momentCaption": "Your journey. Your rhythm. Your Africa.",
+    "destinationsEyebrow": "East Africa",
+    "destinationsTitle": "Two shores, one breath",
+    "tanzaniaLabel": "Endless plains",
+    "tanzaniaTitle": "Tanzania",
+    "tanzaniaBody": "Serengeti, Ngorongoro Crater, Tarangire, the migration. This is Serenova’s craft — composed day by day, never held in stock.",
+    "zanzibarLabel": "Island light",
+    "zanzibarTitle": "Zanzibar",
+    "zanzibarBody": "Pale sand, turquoise water, Stone Town. Often the exhale after safari — sometimes the journey itself.",
+    "explore": "Explore",
+    "stylesEyebrow": "Eight ways to travel",
+    "stylesTitle": "Safari is not a format",
+    "stylesBody": "Family, honeymoon, photography, walking, migration, fly-in, halal, or simply the beach. We start with you, not a catalogue.",
+    "journeysEyebrow": "Composed journeys",
+    "journeysTitle": "Starting points, never inventory",
+    "journeysBody": "Jenny reads every request herself. Prices shown are “from” figures, for two travellers.",
+    "from": "From",
+    "perPerson": "/ person",
+    "aboutEyebrow": "Lausanne · Tanzania",
+    "aboutTitle": "One house, one person",
+    "aboutBody": "Serenova began with a first journey to Tanzania that never quite ended. Jenny designs every itinerary by hand, with trusted local partners, and reviews every enquiry herself.",
+    "aboutCta": "Meet Jenny",
+    "ctaTitle": "Tell us the journey you are imagining",
+    "ctaBody": "Four questions are enough. Jenny replies in person — WhatsApp, a call, or email."
+  },
+  "journeysPreview": {
+    "wild": {
+      "name": "Wild Essence",
+      "meta": "3 days · mid-range",
+      "body": "Serengeti and Ngorongoro. A first meeting, short and true."
+    },
+    "ndutu": {
+      "name": "Ndutu Wilderness",
+      "meta": "8 days · mid-range",
+      "body": "Calving season, the crater, then the Serengeti. The rhythm of a real quote."
+    },
+    "ocean": {
+      "name": "Bush & Ocean",
+      "meta": "10 days · luxury",
+      "body": "Safari, then Zanzibar. The land, then the open water."
+    }
+  },
+  "footer": {
+    "tagline": "Journeys that matter",
+    "rights": "All rights reserved",
+    "placeholderNote": "Contact details are placeholders — to confirm with Jenny."
+  },
+  "common": {
+    "basedIn": "Based in Lausanne, Switzerland",
+    "comingTitle": "This page is taking shape",
+    "comingBody": "The frame is here. Deeper content comes next — we will not ship the generated English from the mockup.",
+    "backHome": "Back home"
+  },
+  "pages": {
+    "destinations": {
+      "eyebrow": "East Africa",
+      "title": "Destinations",
+      "lede": "From mythic plains to slower islands. We almost always begin with Tanzania."
+    },
+    "tanzania": {
+      "eyebrow": "The heart of the work",
+      "title": "Tanzania",
+      "lede": "Serengeti, Ngorongoro, Tarangire, Manyara, Ruaha, Selous. Sixteen places, one thread: yours."
+    },
+    "zanzibar": {
+      "eyebrow": "Islands",
+      "title": "Zanzibar",
+      "lede": "Nungwi, Matemwe, Paje, Stone Town. The breath after the bush — or the whole journey."
+    },
+    "kenya": {
+      "eyebrow": "On request",
+      "title": "Kenya",
+      "lede": "Masai Mara and beyond. Not a catalogue: a conversation with Jenny."
+    },
+    "uganda": {
+      "eyebrow": "On request",
+      "title": "Uganda",
+      "lede": "Forests, gorillas, lakes. A page of intention, not a departure grid."
+    },
+    "kilimanjaro": {
+      "eyebrow": "The mountain",
+      "title": "Kilimanjaro",
+      "lede": "Machame, Lemosho, Marangu. The routes, the days, and what you actually need to know."
+    },
+    "styles": {
+      "eyebrow": "Typologies",
+      "title": "Safari styles",
+      "lede": "Eight ways into the same country. Then we compose."
+    },
+    "journeys": {
+      "eyebrow": "Templates",
+      "title": "Journeys",
+      "lede": "Seven possible starts. None of them are fixed. The real price is built by hand."
+    },
+    "about": {
+      "eyebrow": "Jenny · Lausanne",
+      "title": "About",
+      "lede": "A personal approach, local partners, and the time to listen before proposing."
+    },
+    "journal": {
+      "eyebrow": "Guides",
+      "title": "Journal",
+      "lede": "Seasons, families, the migration, what to pack. Three seed essays first — not an SEO mill."
+    },
+    "contact": {
+      "eyebrow": "Lausanne",
+      "title": "Contact",
+      "lede": "Write, call, or use WhatsApp. Jenny reads every message."
+    },
+    "plan": {
+      "eyebrow": "Personal brief",
+      "title": "Plan your trip",
+      "lede": "The four-step planner arrives in the conversion phase. For now, a note is enough."
+    }
+  }
+}
