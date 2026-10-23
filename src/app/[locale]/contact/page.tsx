@@ -30,12 +30,19 @@ export default async function Page({
   return (
     <>
       <PageHero image="sunset-2" images={["sunset-2", "culture-1", "founder-portrait"]} title={t("title")} lede={t("lede")} />
-      <Container className="grid gap-8 py-12 font-sans text-sm text-muted md:grid-cols-4">
+      <Container className="grid gap-8 py-12 font-sans text-sm text-muted md:grid-cols-2 lg:grid-cols-5">
         <p>
           {t("email")}
           <br />
           <a className="text-ink" href={`mailto:${site.email}`}>
             {site.email}
+          </a>
+        </p>
+        <p>
+          {t("phone")}
+          <br />
+          <a className="text-ink" href={site.phoneHref}>
+            {site.phoneDisplay}
           </a>
         </p>
         <p>

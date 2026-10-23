@@ -1,0 +1,6 @@
+.env*
+!.env.example
+.cursor
+.DS_Store
+supabase/.temp
+*.pem

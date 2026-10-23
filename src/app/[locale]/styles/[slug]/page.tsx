@@ -9,6 +9,7 @@ import { getLodgesForStyle, getStyle, styles } from "@/content/catalog";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
+import { entryMeta } from "@/lib/page-meta";
 
 const styleHeroes: Record<string, string[]> = {
   "halal-friendly": ["halal", "lodge-tulia", "lodge-under-the-shade", "culture-1"],
@@ -36,10 +37,7 @@ export async function generateMetadata({
     return {};
   }
   const t = await getTranslations({ locale: asLocale(locale), namespace: `catalog.styles.${slug}` });
-  return {
-    title: t("name"),
-    description: t("summary"),
-  };
+  return entryMeta(locale, `/styles/${slug}`, t("name"), t("summary"));
 }
 
 export default async function Page({

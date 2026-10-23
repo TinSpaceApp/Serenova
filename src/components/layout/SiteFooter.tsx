@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { AdminLock } from "@/components/admin/AdminLock";
 import { site, navItems } from "@/lib/site";
 import { LanguageSwitch } from "@/components/layout/LanguageSwitch";
 import { Wordmark } from "@/components/ui/Wordmark";
@@ -26,6 +27,9 @@ export async function SiteFooter() {
           <a href={`mailto:${site.email}`} className="hover:text-ivory">
             {site.email}
           </a>
+          <a href={site.phoneHref} className="hover:text-ivory">
+            {site.phoneDisplay}
+          </a>
           <a href={site.whatsappHref} className="hover:text-ivory">
             WhatsApp
           </a>
@@ -41,9 +45,12 @@ export async function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-[1320px] flex-col gap-3 px-5 py-6 font-sans text-[0.72rem] text-ivory/45 md:flex-row md:justify-between md:px-10">
+        <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-4 px-5 py-6 font-sans text-[0.72rem] text-ivory/45 md:px-10">
           <p>© 2026 Serenova. {t("rights")}.</p>
-          {site.contactsArePlaceholders ? <p>{t("placeholderNote")}</p> : null}
+          <div className="flex items-center gap-4">
+            {site.contactsArePlaceholders ? <p className="hidden sm:block">{t("placeholderNote")}</p> : null}
+            <AdminLock label={t("admin")} />
+          </div>
         </div>
       </div>
     </footer>

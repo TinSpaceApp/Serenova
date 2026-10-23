@@ -9,6 +9,7 @@ import { getLodgesForPlace, getPlace, places } from "@/content/catalog";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
+import { entryMeta } from "@/lib/page-meta";
 
 export function generateStaticParams() {
   return places.map((place) => ({ slug: place.slug }));
@@ -25,10 +26,7 @@ export async function generateMetadata({
     return {};
   }
   const t = await getTranslations({ locale: asLocale(locale), namespace: `catalog.places.${slug}` });
-  return {
-    title: t("name"),
-    description: t("summary"),
-  };
+  return entryMeta(locale, `/tanzania/${slug}`, t("name"), t("summary"));
 }
 
 export default async function Page({

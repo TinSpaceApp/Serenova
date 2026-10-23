@@ -1,11 +1,18 @@
 "use server";
 
+import { getLocale } from "next-intl/server";
+import { notifyNewRequest } from "@/lib/email/send";
 import { createServerSupabase } from "@/lib/supabase/server";
+import type { Locale } from "@/i18n/routing";
 
 export type LeadResult = { ok: true } | { ok: false; error: string };
 
 function asString(value: FormDataEntryValue | null) {
   return typeof value === "string" ? value.trim() : "";
+}
+
+function asLocale(value: string): Locale {
+  return value === "fr" ? "fr" : "en";
 }
 
 export async function submitContact(formData: FormData): Promise<LeadResult> {
@@ -19,9 +26,12 @@ export async function submitContact(formData: FormData): Promise<LeadResult> {
     return { ok: false, error: "Please complete the required fields and consent." };
   }
 
+  const locale = asLocale(await getLocale());
   const supabase = createServerSupabase();
   const { error } = await supabase.from("leads").insert({
     kind: "contact",
+    locale,
+    source_page: asString(formData.get("sourcePage")) || "/contact",
     payload: {
       firstName,
       lastName,
@@ -35,6 +45,14 @@ export async function submitContact(formData: FormData): Promise<LeadResult> {
   if (error) {
     return { ok: false, error: "The message could not be sent. Please email Jenny directly." };
   }
+
+  void notifyNewRequest({
+    name: [firstName, lastName].filter(Boolean).join(" "),
+    email,
+    locale,
+    kind: "contact",
+    preview: message.slice(0, 280),
+  });
 
   return { ok: true };
 }
@@ -51,10 +69,13 @@ export async function submitPlanner(formData: FormData): Promise<LeadResult> {
 
   const destinations = formData.getAll("destinations").map(String);
   const styles = formData.getAll("styles").map(String);
+  const locale = asLocale(await getLocale());
 
   const supabase = createServerSupabase();
   const { error } = await supabase.from("leads").insert({
     kind: "planner",
+    locale,
+    source_page: asString(formData.get("sourcePage")) || "/plan",
     context: {
       package: asString(formData.get("package")),
       destination: asString(formData.get("destination")),
@@ -62,6 +83,8 @@ export async function submitPlanner(formData: FormData): Promise<LeadResult> {
     payload: {
       destinations,
       tripType: asString(formData.get("tripType")),
+      dateFrom: asString(formData.get("dateFrom")),
+      dateTo: asString(formData.get("dateTo")),
       dates: asString(formData.get("dates")),
       flexible: asString(formData.get("flexible")),
       nights: asString(formData.get("nights")),
@@ -86,6 +109,17 @@ export async function submitPlanner(formData: FormData): Promise<LeadResult> {
   if (error) {
     return { ok: false, error: "The brief could not be sent. Please email or WhatsApp Jenny." };
   }
+
+  void notifyNewRequest({
+    name: [firstName, lastName].filter(Boolean).join(" "),
+    email,
+    locale,
+    kind: "planner",
+    preview: [asString(formData.get("destination")), asString(formData.get("notes")), asString(formData.get("interests"))]
+      .filter(Boolean)
+      .join(" · ")
+      .slice(0, 280),
+  });
 
   return { ok: true };
 }

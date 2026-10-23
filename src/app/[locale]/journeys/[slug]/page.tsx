@@ -10,6 +10,7 @@ import { getLodgeByPhoto, getLodgePhotos, getPackage, packages } from "@/content
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { asLocale } from "@/i18n/routing";
+import { entryMeta } from "@/lib/page-meta";
 
 export function generateStaticParams() {
   return packages.map((item) => ({ slug: item.slug }));
@@ -29,10 +30,7 @@ export async function generateMetadata({
     locale: asLocale(locale),
     namespace: `catalog.packages.${slug}`,
   });
-  return {
-    title: copy("name"),
-    description: copy("overview"),
-  };
+  return entryMeta(locale, `/journeys/${slug}`, copy("name"), copy("overview"));
 }
 
 export default async function Page({

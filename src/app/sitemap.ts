@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { articles, packages, places, styles } from "@/content/catalog";
+import { site } from "@/lib/site";
 
-const site = "https://serenova-gilt.vercel.app";
+const origin = site.url;
 
 const staticPaths = [
   "",
@@ -32,12 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticPaths, ...dynamicPaths].flatMap((path) =>
     locales.map((locale) => ({
-      url: `${site}/${locale}${path}`,
+      url: `${origin}/${locale}${path}`,
       lastModified: new Date(),
       alternates: {
         languages: {
-          en: `${site}/en${path}`,
-          fr: `${site}/fr${path}`,
+          en: `${origin}/en${path}`,
+          fr: `${origin}/fr${path}`,
+          "x-default": `${origin}/en${path}`,
         },
       },
     })),

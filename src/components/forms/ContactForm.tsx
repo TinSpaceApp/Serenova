@@ -28,6 +28,7 @@ export function ContactForm() {
 
   return (
     <form action={onSubmit} className="grid gap-6">
+      <input type="hidden" name="sourcePage" value="/contact" />
       <div className="grid gap-6 md:grid-cols-2">
         <label className="grid gap-2 font-sans text-sm">
           {t("firstName")} {t("required")}

@@ -31,6 +31,10 @@
     "provisional": "provisoire",
     "photoPending": "Photographie à fournir",
     "filmLabel": "Film de présentation Serenova",
+    "enlargeFilm": "Agrandir le film",
+    "closeFilm": "Fermer le film",
+    "enableSound": "Activer le son",
+    "muteSound": "Couper le son",
     "primaryNav": "Navigation principale"
   },
   "contactForm": {
@@ -52,12 +56,13 @@
     "title": "Nous écrire",
     "lede": "Composons votre voyage ensemble.",
     "email": "E-mail",
+    "phone": "Téléphone",
     "whatsapp": "WhatsApp",
     "hours": "Horaires",
     "hoursValue": "Lun–Ven, 9:00–18:00 CET",
     "basedIn": "Basée à",
     "basedValue": "Lausanne, Suisse · voyages en Tanzanie et en Afrique de l’Est",
-    "placeholderNote": "Téléphone, WhatsApp et e-mail ci-dessus sont provisoires jusqu’à confirmation par Jenny."
+    "placeholderNote": "Téléphone et WhatsApp ci-dessus sont encore provisoires."
   },
   "aboutPage": {
     "metaTitle": "À propos de Serenova | Safaris personnalisés en Tanzanie",

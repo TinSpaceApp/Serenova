@@ -31,6 +31,10 @@
     "provisional": "provisional",
     "photoPending": "Photograph to be supplied",
     "filmLabel": "Serenova presentation film",
+    "enlargeFilm": "Enlarge the film",
+    "closeFilm": "Close the film",
+    "enableSound": "Turn sound on",
+    "muteSound": "Mute sound",
     "primaryNav": "Primary"
   },
   "contactForm": {
@@ -52,12 +56,13 @@
     "title": "Contact us",
     "lede": "Let’s plan your journey together.",
     "email": "Email",
+    "phone": "Phone",
     "whatsapp": "WhatsApp",
     "hours": "Hours",
     "hoursValue": "Mon–Fri, 9:00–18:00 CET",
     "basedIn": "Based in",
     "basedValue": "Lausanne, Switzerland · planning Tanzania and East Africa",
-    "placeholderNote": "Phone, WhatsApp and email above are placeholders until Jenny confirms them."
+    "placeholderNote": "Phone and WhatsApp above are still provisional."
   },
   "aboutPage": {
     "metaTitle": "About Serenova | Personal Tanzania Safari Planning",

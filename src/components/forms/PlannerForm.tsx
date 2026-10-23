@@ -359,9 +359,12 @@ export function PlannerForm() {
   return (
     <div className="grid items-start gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
       <form action={onSubmit} className="grid gap-10">
+        <input type="hidden" name="sourcePage" value="/plan" />
         <input type="hidden" name="package" value={state.tripType} />
         <input type="hidden" name="destination" value={state.destinations[0] ?? ""} />
         <input type="hidden" name="tripType" value={state.tripType} />
+        <input type="hidden" name="dateFrom" value={state.dateFrom} />
+        <input type="hidden" name="dateTo" value={state.dateTo} />
         <input type="hidden" name="dates" value={composeDates(state.dateFrom, state.dateTo, state.dates)} />
         <input type="hidden" name="nights" value={state.nights} />
         <input type="hidden" name="adults" value={state.adults} />

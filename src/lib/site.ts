@@ -1,18 +1,19 @@
 export const site = {
   name: "Serenova",
   tagline: "Journeys that matter",
-  email: "hello@serenova-safari.com",
-  phoneDisplay: "+41 76 000 00 00",
-  phoneHref: "tel:+41760000000",
-  whatsappHref: "https://wa.me/41760000000",
-  instagram: "https://instagram.com/serenova.safari",
+  url: "https://serenovasafari.com",
+  email: "jenny@serenovasafari.com",
+  phoneDisplay: "+41 79 872 04 84",
+  phoneHref: "tel:+41798720484",
+  whatsappHref: "https://wa.me/41798720484",
+  instagram: "https://www.instagram.com/serenovasafari",
   tiktok: "https://www.tiktok.com/@serenova.safari",
   linkedin: "https://www.linkedin.com/",
   city: "Lausanne",
   country: "Switzerland",
   hours: "Mon–Fri, 9:00–18:00 CET",
   founder: "Jenny",
-  contactsArePlaceholders: true,
+  contactsArePlaceholders: false,
 } as const;
 
 export const navItems = [

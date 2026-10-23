@@ -259,6 +259,10 @@ main {
   box-shadow: inset 0 0 0 1px rgba(245, 241, 232, 0.16);
 }
 
+.film-control {
+  backdrop-filter: blur(10px);
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -782,5 +786,23 @@ select.form-field {
 
   .article-quote p {
     font-size: 1.55rem;
+  }
+}
+
+@media print {
+  .admin-no-print,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  main {
+    animation: none !important;
+    max-width: none !important;
+    padding: 0 !important;
   }
 }

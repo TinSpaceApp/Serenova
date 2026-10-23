@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { JournalArticle } from "@/components/journal/JournalArticle";
 import { getJournalArticle, journalSlugs } from "@/content/journal";
 import { asLocale } from "@/i18n/routing";
+import { entryMeta } from "@/lib/page-meta";
 import { setRequestLocale } from "next-intl/server";
 
 export function generateStaticParams() {
@@ -19,21 +20,12 @@ export async function generateMetadata({
   if (!article) {
     return {};
   }
+  const meta = entryMeta(locale, `/journal/${article.slug}`, article.seoTitle, article.seoDescription);
   return {
-    title: article.seoTitle,
-    description: article.seoDescription,
-    alternates: {
-      canonical: `/${locale}/journal/${article.slug}`,
-      languages: {
-        en: `/en/journal/${article.slug}`,
-        fr: `/fr/journal/${article.slug}`,
-      },
-    },
+    ...meta,
     openGraph: {
-      title: article.seoTitle,
-      description: article.seoDescription,
+      ...meta.openGraph,
       type: "article",
-      locale: locale === "fr" ? "fr_FR" : "en_GB",
     },
   };
 }
