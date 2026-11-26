@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { LightboxProvider } from "@/components/media/Lightbox";
 import { fontClassName } from "@/lib/fonts";
 import { routing, type Locale } from "@/i18n/routing";
@@ -90,6 +91,7 @@ export default async function LocaleLayout({
             <SiteHeader transparent />
             <main>{children}</main>
             <SiteFooter />
+            <WhatsAppFloat />
           </LightboxProvider>
         </NextIntlClientProvider>
       </body>
