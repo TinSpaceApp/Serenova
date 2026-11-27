@@ -35,7 +35,8 @@
     "closeFilm": "Close the film",
     "enableSound": "Turn sound on",
     "muteSound": "Mute sound",
-    "primaryNav": "Primary"
+    "primaryNav": "Primary",
+    "whatsappCta": "Message on WhatsApp"
   },
   "contactForm": {
     "firstName": "First name",

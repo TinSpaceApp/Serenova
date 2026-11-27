@@ -35,7 +35,8 @@
     "closeFilm": "Fermer le film",
     "enableSound": "Activer le son",
     "muteSound": "Couper le son",
-    "primaryNav": "Navigation principale"
+    "primaryNav": "Navigation principale",
+    "whatsappCta": "Écrire sur WhatsApp"
   },
   "contactForm": {
     "firstName": "Prénom",

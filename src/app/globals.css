@@ -48,11 +48,17 @@ html {
   .scroll-line,
   .lightbox-shell,
   .lightbox-stage,
+  .whatsapp-float,
   main {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     clip-path: none !important;
+  }
+
+  .whatsapp-float:hover,
+  .whatsapp-float:focus-visible {
+    transform: none !important;
   }
 
   .photo-zoom,
@@ -789,9 +795,56 @@ select.form-field {
   }
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 9999px;
+  color: #fff;
+  background: #25d366;
+  box-shadow:
+    0 10px 28px color-mix(in srgb, #128c7e 28%, transparent),
+    0 2px 8px color-mix(in srgb, var(--ink) 12%, transparent);
+  transition:
+    transform 320ms var(--ease-out),
+    box-shadow 320ms var(--ease-out),
+    background-color 320ms var(--ease-out);
+  animation: rise 700ms var(--ease-out) 0.45s both;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  background: #1ebe57;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow:
+    0 14px 32px color-mix(in srgb, #128c7e 34%, transparent),
+    0 4px 12px color-mix(in srgb, var(--ink) 14%, transparent);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid color-mix(in srgb, #25d366 55%, white);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 3.65rem;
+    height: 3.65rem;
+  }
+}
+
 @media print {
   .admin-no-print,
-  .no-print {
+  .no-print,
+  .whatsapp-float {
     display: none !important;
   }
 
